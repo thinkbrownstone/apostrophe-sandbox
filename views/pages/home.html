@@ -1,5 +1,3 @@
-{% include "blog:blogMacros.html" %}
-
 {% extends "layout.html" %}
 
 {% block bodyClass %}{{ super() }} home-page{% endblock %}
@@ -12,35 +10,27 @@
 {% block hero %}
 
   {# gets the blog widget which is a large slider #}
-  {{ aposSingleton(page, 'blog', 'blog') }}
+  {{ aposSingleton(page, 'featured', 'blog') }}
 
 {% endblock %}
 
 
 {% block mainContent %}
 
-  <div class="column main-content-column">
-    <div class="column-element">
-      {{ aposSingleton(page, 'image1', 'slideshow', { aspectRatio: [2, 1], noHeight: true }) }}
-    </div>
-    <div class="column-element">
-      {{ aposArea(page, 'content1', { textOnly: true, controls: ['style', 'bold', 'italic'], styles: [ { value:'div', label: 'Normal' }, { value: 'h4', label: 'Heading' } ] }) }}
-    </div>
-  </div>
-  <div class="column main-content-column">
-    <div class="column-element">
-      {{ aposSingleton(page, 'image2', 'slideshow', { aspectRatio: [2, 1], noHeight: true }) }}
-    </div>
-    <div class="column-element">
-      {{ aposArea(page, 'content2', { textOnly: true, controls: ['style', 'bold', 'italic'], styles: [ { value:'div', label: 'Normal' }, { value: 'h4', label: 'Heading' } ] }) }}
+  <div class="intro-quote-section">
+    <div class="container">
+      <blockquote>
+        {{ aposArea(page, 'introquote', { textOnly: true, controls: ['style', 'bold', 'italic'] }) }}
+      </blockquote>
     </div>
   </div>
-  <div class="column main-content-column">
-    <div class="column-element">
-      {{ aposSingleton(page, 'image3', 'slideshow', { aspectRatio: [2, 1], noHeight: true }) }}
-    </div>
-    <div class="column-element">
-      {{ aposArea(page, 'content3', { textOnly: true, controls: ['style', 'bold', 'italic'], styles: [ { value:'div', label: 'Normal' }, { value: 'h4', label: 'Heading' } ] }) }}
+
+  <div class="our-work-home-quote">
+    <div class="container">
+      <blockquote>
+        {{ aposArea(page, 'homeourworkquote', { textOnly: true, controls: ['style', 'bold', 'italic'] }) }}
+      </blockquote>
+      {{ aposSingleton(page, 'homeourworkimgs', 'blog') }}
     </div>
   </div>
 

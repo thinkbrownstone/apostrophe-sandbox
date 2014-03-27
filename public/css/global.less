@@ -5,42 +5,54 @@
 .main-navigation
 {
   background: #000;
+  height: 120px;
   .logo
   {
     display: block;
+    float: left;
     width: 257px;
     height: 94px;
-    margin: 0 auto;
     background-image: url('/images/logo.png');
+    margin-top: 10px;
   }
 
   .tabs
   {
     margin-top: 33px;
     text-align: center;
+    float: right;
 
     .tab
     {
       padding: 12px;
       margin-left: 5px;
       display: inline-block;
-      .Montserrat-Bold(100%);
       text-transform: uppercase;
+      border: 2px solid transparent;
+
+      a
+      {
+        color: white;
+        font-size: 13px;
+        &:hover {
+          text-decoration: none;
+        }
+      }
 
       &.current-page
       {
-        background-color: @blue;
-        a { color: white; }
+        border-color: white;
         &:hover
         {
-          background-color: @blue;
+          border-color: @brand-primary;
+          background-color: @brand-primary;
         }
       }
 
       .transition(background-color @transition-time, padding @transition-time;);
       &:hover
       {
-        background-color: #eee;
+        background-color: @brand-primary;
       }
     }
   }
