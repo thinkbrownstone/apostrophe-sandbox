@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+{% include "pageMacros.html" %}
+
+{% block bodyClass %}{{ super() }} home-page{% endblock %}
+
+{# breadcrumbs are excluded from the homepage #}
+{% block breadcrumbs %}
+{% endblock %}
+
+
+{% block hero %}
+
+  {# gets the case study widget which is a large slider #}
+  {{ aposSingleton(page, 'case', 'case') }}
+
+{% endblock %}
+
+

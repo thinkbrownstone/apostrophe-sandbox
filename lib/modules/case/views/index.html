@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+
+{% include "blogMacros.html" %}
+
+{% block bodyClass %}{{ super() }} apos-blog-page{% endblock %}
+
+{# 'here()' returns the URL of the page, with the year and month added if we are #}
+{# viewing by month, plus any query string based on active filters. You can pass #}
+{# 'changes' to override filters. Passing null for a filter removes it. #}
+
+{%- macro here(changes) -%}
+  {{ page.url | build([ 'year', 'month' ], { year: activeYear, month: activeMonth, tag: query.tag }, changes) }}
+{%- endmacro -%}
+
+{# Output the current content of the page, with buttons to edit it #}
+
+{% block mainContent %}
+
+  <h2>Case Studies</h2>
+
+{% endblock %}
