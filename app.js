@@ -64,7 +64,6 @@ var site = require('apostrophe-site')({
       { name: 'marquee', label: 'Marquee' },
       { name: 'home', label: 'Home Page' },
       { name: 'blog', label: 'Blog' },
-      { name: 'case', label: 'Case Study' },
       { name: 'map', label: 'Map' },
       { name: 'groups', label: 'Directory' },
       { name: 'company', label: 'Company' }
@@ -75,18 +74,20 @@ var site = require('apostrophe-site')({
   modules: {
     // Styles required by the new editor, must go FIRST
     'apostrophe-ui-2': {},
+    'apostrophe-snippets': {},
     'apostrophe-blog': {
       label: 'Blogs',
       instanceLabel: 'Blog'
     },
-    'case': {
-      extend: 'apostrophe-blog',
-      name: 'case',
-      label: 'Case Studies',
-      instance: 'study',
-      instanceLabel: 'Case Study',
-      menuName: 'aposCaseMenu'
-    },
+    // // demonstrates 'Case Study' content type subclass of Blog
+    // 'case': {
+    //   extend: 'apostrophe-blog',
+    //   name: 'case',
+    //   label: 'Case Studies',
+    //   instance: 'study',
+    //   instanceLabel: 'Case Study',
+    //   menuName: 'aposCaseMenu'
+    // },
     'apostrophe-people': {
       email: {
         from: 'Brian Feister <brian.feister@thinkbrownstone.com>'
