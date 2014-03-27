@@ -12,34 +12,26 @@
 <!-- APOS-SEO-DESCRIPTION {% block seoDescription %}{% endblock %} -->
 
 {% block header %}
-  <div class="block header">
-    <div class="inner">
 
-      <form class="apos-search-form apos-mini-search-form" action="/search">
-        Search: <input type="text" name="q" value="" class="search-field" />
-        <input type="submit" class="search-submit" value="Go" />
-      </form>
+<div class="main-navigation">
+  <a href="/" class="logo"></a>
+  {% block mainNav %}
+    <ul class="tabs">
+      {% for tab in page.tabs %}
+        {% if tab.slug == page.slug %}
+          <li class="tab current-page">{{ pageLink(tab) }}</li>
+        {% else %}
+          <li class="tab">{{ pageLink(tab) }}</li>
+        {% endif %}
+      {% endfor %}
+    </ul>
+  {% endblock %}
+
+</div>
+{% block headerBody %}
+{% endblock %}
 
 
-      <div class="main-navigation">
-        <a href="/" class="logo"></a>
-        {% block mainNav %}
-          <ul class="tabs">
-            {% for tab in page.tabs %}
-              {% if tab.slug == page.slug %}
-                <li class="tab current-page">{{ pageLink(tab) }}</li>
-              {% else %}
-                <li class="tab">{{ pageLink(tab) }}</li>
-              {% endif %}
-            {% endfor %}
-          </ul>
-        {% endblock %}
-
-      </div>
-      {% block headerBody %}
-      {% endblock %}
-    </div>
-  </div>
 {% endblock %}
 
 {% block hero %}
