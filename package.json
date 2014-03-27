@@ -1,7 +1,7 @@
 {
-  "name": "the-new-sandbox",
+  "name": "tbi-apostrophe",
   "version": "0.5.0",
-  "description": "Sandbox site featuring typical Apostrophe features",
+  "description": "Think Brownstone on Apostrophe CMS",
   "main": "app.js",
   "scripts": {
     "start": "node app.js"
@@ -10,7 +10,7 @@
     "type": "git",
     "url": "https://github.com/punkave/apostrophe-sandbox"
   },
-  "author": "P'unk Avenue",
+  "author": "Brian Feister",
   "license": "BSD",
   "dependencies": {
     "apostrophe": "0.5.x",
