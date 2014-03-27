@@ -2,8 +2,8 @@ var site = require('apostrophe-site')({
 
   // This line is required and allows apostrophe-site to use require() and manage our NPM modules for us.
   root: module,
-  shortName: 'apostrophe-sandbox',
-  hostName: 'apostrophe-sandbox',
+  shortName: 'tbi-apostrophe',
+  hostName: 'tbi-apostrope',
   title: 'Apostrophe Sandbox',
   sessionSecret: 'apostrophe sandbox demo party',
   adminPassword: 'demo',
@@ -11,6 +11,14 @@ var site = require('apostrophe-site')({
   locals: {
     loginButton: true
   },
+
+  addImageSizes: [
+    {
+      name: 'max',
+      width: 1600,
+      height: 1280
+    }
+  ],
 
   lockups: {
     left: {
@@ -56,6 +64,7 @@ var site = require('apostrophe-site')({
       { name: 'marquee', label: 'Marquee' },
       { name: 'home', label: 'Home Page' },
       { name: 'blog', label: 'Blog' },
+      { name: 'case', label: 'Case Study' },
       { name: 'map', label: 'Map' },
       { name: 'groups', label: 'Directory' },
       { name: 'company', label: 'Company' }
@@ -66,11 +75,29 @@ var site = require('apostrophe-site')({
   modules: {
     // Styles required by the new editor, must go FIRST
     'apostrophe-ui-2': {},
-    'apostrophe-blog': {},
+    'apostrophe-blog': {
+      label: 'Blogs',
+      instanceLabel: 'Blog'
+    },
+    'case': {
+      extend: 'apostrophe-blog',
+      name: 'case',
+      label: 'Case Studies',
+      instance: 'study',
+      instanceLabel: 'Case Study',
+      menuName: 'aposCaseMenu'
+    },
     'apostrophe-people': {
       email: {
-        from: 'Tommy Boutell <tom@example.com>'
-      }
+        from: 'Brian Feister <brian.feister@thinkbrownstone.com>'
+      },
+      addFields: [
+        {
+          name: 'jobTitle',
+          type: 'string',
+          label: 'Job Title'
+        }
+      ]
     },
     'apostrophe-groups': {},
     'apostrophe-map':      {},
