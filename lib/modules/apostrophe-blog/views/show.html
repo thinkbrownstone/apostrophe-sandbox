@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+
+{% include "blogMacros.html" %}
+
+{% block bodyClass %}{{ super() }} apos-blog-post-page{% endblock %}
+
+{# Article specific title tag, for Facebook, SEO, etc. #}
+{%- block title -%}
+  {{ siteTitle }} &ndash; {{ item.title | e }}
+{%- endblock -%}
+
+{# Facebook image, so it doesn't hoover up images from the dropdown menus #}
+{# Works only if you specify an absolute URL for uploadsUrl in data/local.js #}
+
+{% block extraBreadcrumbs %}
+  <li><a href="{{ page.url }}">{{ page.title | e }}</a></li>
+  <li>&nbsp;/&nbsp;{{ item.title | e }}</li>
+{% endblock %}
+
+{% block mainContent %}
+
+  {#
+    <div class="column apos-area-sidebar">
+      {{ aposArea(page, 'sidebar') }}
+    </div>
+  #}
+
+  <div class="column-4 blog-posts">
+    {{ renderBlogPost(item, page.url) }}
+  </div>
+
+{% endblock %}

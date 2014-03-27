@@ -1,0 +1,20 @@
+{% for snippet in item._snippets %}
+  {% if not snippet.hideTitle %}
+
+  {% set firstImage = aposAreaImage(snippet, 'thumbnail') or aposAreaImage(snippet, 'body') %}
+
+  {% if firstImage %}
+    <img src="{{ aposFilePath(firstImage, { size: 'max' }) }}" content="{{ aposFilePath(firstImage, { size: 'max' }) }}" />
+  {% endif %}
+
+    <h4>
+      {% if snippet.url %}
+        <a href="{{ snippet.url }}">
+      {% endif %}
+      {{ snippet.title | e }}
+      {% if snippet.url %}
+        </a>
+      {% endif %}
+    </h4>
+  {% endif %}
+{% endfor %}

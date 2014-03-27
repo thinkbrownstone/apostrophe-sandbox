@@ -1,0 +1,98 @@
+{% include 'pagerMacros.html' %}
+{# use renderBlogPosts to show all items as full posts on a page #}
+
+{% macro renderBlogPosts(items, pageUrl) %}
+  {% if items %}
+    {% for item in items %}
+      {{ renderBlogPost(item, pageUrl) }}
+    {% endfor %}
+  {% else %}
+    <h4>{{ __('There are no blog posts yet.') }}</h4>
+  {% endif %}
+{% endmacro %}
+
+{% macro renderBlogPost(item, pageUrl) %}
+  <div class="apos-blog-post">
+    <div class="apos-blog-post-heading"
+
+      {% set firstImage = aposAreaImage(item, 'thumbnail') or aposAreaImage(item, 'body') %}
+
+      {% if firstImage %}
+        <img src="{{ aposFilePath(firstImage, { size: 'max' }) }}" content="{{ aposFilePath(firstImage, { size: 'max' }) }}" />
+      {% endif %}
+
+      <h4><a href="{{ item.url }}">{{ item.title | e }}</a></h4>
+      <div class="blog-title-divider"></div>
+      <h6>{{ item.publishedAt | date("MMM DD, YYYY") }}</h6>
+    </div>
+    <div class="apos-blog-post-body">{{ aposArea(item, 'body') }}</div>
+    {% if item.tags %}
+      <div class="apos-blog-tags">
+        {{ __('File under') }}:
+        {% for tag in item.tags %}
+          <a href="#">{{ tag }}</a>
+        {% endfor %}
+      </div>
+    {% endif %}
+{% endmacro %}
+
+{# ...or use renderBlogPostPreviews to show previews of all items on a page (date and title) #}
+
+{% macro renderBlogPostPreviews(items, pageUrl) %}
+  {% if items %}
+    {% for item in items %}
+      {{ renderBlogPostPreview(item, pageUrl) }}
+    {% endfor %}
+  {% else %}
+    <h4>{{ __('There are no blog posts yet.') }}</h4>
+  {% endif %}
+{% endmacro %}
+
+{% macro renderBlogPostPreview(item, pageUrl) %}
+  <div class="apos-blog-post-preview">
+    <div class="apos-blog-post">
+
+      {% set firstImage = aposAreaImage(item, 'thumbnail') or aposAreaImage(item, 'body') %}
+
+      {% if firstImage %}
+        <img src="{{ aposFilePath(firstImage, { size: 'two-thirds' })}}" content="{{ aposFilePath(firstImage, { size: 'two-thirds' }) }}" />
+      {% endif %}
+
+      <div class="apos-blog-date">
+       <h4><a href="{{ item.url }}">{{ item.publishedAt | date("MMM") }}</a></h4>
+        <h3><a href="{{ item.url }}">{{ item.publishedAt | date("DD") }}</a></h4>
+      </div>
+      <div class="apos-blog-title">
+        <h4><a href="{{ item.url }}">{{ item.title | e }}</a></h4>
+      </div>
+      {# TODO: add byline once the author field is worked out in A2 #}
+    </div>
+  </div>
+{% endmacro %}
+
+
+{% macro renderBlogSliders(items, pageUrl) %}
+  {% if items %}
+    {% for item in items %}
+      {{ renderBlogSlider(item, pageUrl) }}
+    {% endfor %}
+  {% else %}
+    <h4>{{ __('There are no blog posts yet.') }}</h4>
+  {% endif %}
+{% endmacro %}
+
+{% macro renderBlogSlider(item, pageUrl) %}
+  <li class="apos-blog-post-preview">
+    <div class="apos-blog-post">
+      <h3>New Testing Listing</h3>
+      <div class="apos-blog-date">
+       <h4><a href="{{ item.url }}">{{ item.publishedAt | date("MMM") }}</a></h4>
+        <h3><a href="{{ item.url }}">{{ item.publishedAt | date("DD") }}</a></h4>
+      </div>
+      <div class="apos-blog-title">
+        <h4><a href="{{ item.url }}">{{ item.title | e }}</a></h4>
+      </div>
+      {# TODO: add byline once the author field is worked out in A2 #}
+    </div>
+  </li>
+{% endmacro %}
