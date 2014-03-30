@@ -29,5 +29,14 @@
     "apostrophe-blocks": "0.5.x",
     "apostrophe-fancy-page": "0.5.x",
     "optimist": "~0.6.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.0.17",
+    "grunt": "^0.4.4",
+    "load-grunt-tasks": "~0.4.0",
+    "grunt-notify": "~0.2.20",
+    "time-grunt": "~0.2.1",
+    "grunt-contrib-imagemin": "~0.3.0",
+    "grunt-dr-svg-sprites": "^0.5.5"
   }
 }
