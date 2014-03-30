@@ -1,0 +1,1670 @@
+/* Site-wide CSS - no media queries
+------------------------------------------------------------ */
+
+/** TODO List:
+
+1. Set typekit font weights 300, 400, 500, 600
+2. Consistent selector formatting
+3. Style the contact form select element
+4. ...
+
+*/
+
+@viewport { width: device-width; }
+
+/* For Win8/IE11+ snap mode support */
+@media screen and (max-width:40em) {
+    @-ms-viewport{
+        width: device-width;
+    }
+}
+
+html {
+    font-size: 62.5%;
+    color: #333;
+    overflow-y: scroll;
+    min-height: 100%;
+    }
+
+html .content-main {
+	font-family: "freight-text-pro", georgia, serif;
+}
+
+body {
+	overflow-x: hidden;
+    margin: 0 auto;
+    height: 100%;
+    }
+
+/* Box Model, NB: Not supported below IE8 */
+*,
+*:before,
+*:after {
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    }
+
+img, embed, object, video {
+	max-width: 100%;
+	vertical-align: middle;
+	}
+
+/* override normalize.css top margin */
+h1, h2, h3, h4, h5, h6,
+p, ul, ol, dl { margin-top: 0; }
+
+
+/* Page Structure
+-------------------------------------------------- */
+
+.content-main {
+	font-size: 26px;
+	font-size: 2.6rem;
+	line-height: 1.5;
+	}
+
+
+/* Typography
+-------------------------------------------------- */
+
+/** Typekit
+
+Sans:
+.tk-freight-sans-pro
+font-family: "freight-sans-pro";
+
+Serif:
+.tk-freight-text-pro
+font-family: "freight-text-pro";
+
+font-weights:
+
+Book (lightest in our kit) - 300
+Medium/normal - 400
+Semibold - 500
+Bold - 600
+
+*/
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: "freight-sans-pro", sans-serif;
+	font-weight: normal;
+	text-align: center;
+	text-transform: uppercase;
+	}
+
+h2 { text-transform: none; }
+
+h1,.h1 {
+	font-size: 24px;
+	font-size: 2.4rem;
+	}
+
+h2,.h2 {
+	font-size: 24px;
+	font-size: 2.4rem;
+	}
+
+h3,.h3 {
+	font-size: 20px;
+	font-size: 2rem;
+	}
+
+h4,.h4 {
+	font-size: 18px;
+	font-size: 1.8rem;
+	}
+
+h5,.h5,
+h6,.h6 {
+	font-size: 16px;
+	font-size: 1.6rem; }
+
+/* lead paragraph */
+.lead {
+	margin-bottom: 1em;
+	font-size: 39px;
+	font-size: 3.9rem;
+	line-height: 1.35;
+	}
+
+/* anchors */
+
+a:link, a:visited {
+	text-decoration: none;
+	}
+
+a:hover, a:focus, a:active {
+	text-decoration: underline;
+	}
+
+hr {
+    display: block;
+    margin: 1.5em 0;
+    padding: 0;
+    height: 2px;
+    background: #efefef;
+    border: 0;
+	}
+
+/* css3 multi-column: IE10+ */
+.columns-2 {
+	-webkit-column-count: 2;
+	-webkit-column-gap:   70px;
+	-moz-column-count:    2;
+	-moz-column-gap:      70px;
+	column-count:         2;
+	column-gap:           70px;
+	}
+
+/* Lists
+-------------------------------------------------- */
+/* might want to use article here rather than the main content container */
+
+.content-main ul,
+.content-main ol {
+	margin-bottom: 1em;
+	}
+
+.content-main ul > li,
+.content-main ol > li {
+	margin-bottom: .25em;
+	}
+
+.list-inline {
+	list-style-type: none;
+	}
+
+.list-inline-centered {
+	text-align: center;
+	}
+
+.list-inline > li {
+	display: inline-block;
+	}
+
+/* Forms
+-------------------------------------------------- */
+
+// must be namespaced to prevent collision with CMS admin UI
+.content-main {
+
+	form {}
+
+	fieldset {
+		padding: 0;
+		border: 0;
+		}
+
+	fieldset p {
+		margin-bottom: 1em;
+		}
+
+	legend {}
+
+	label {
+		display: block;
+		margin-bottom: .2em;
+	    font-family: "freight-sans-pro", sans-serif;
+	    font-size: 24px;
+	    font-size: 2.4rem;
+	    font-weight: 400;
+		}
+
+	.input-text,
+	textarea {
+		padding: .8em .5em;
+		width: 100%;
+		background: #eee;
+		border: 1px solid #d9d9d9;
+		border-radius: 4px;
+	    }
+	.input-text-search{
+		background: #fff;
+	}
+
+	input[type="submit"] {
+		border: none;
+		-webkit-appearance: none;
+		}
+
+	select {
+		position: relative;
+		padding: .8em .5em;
+		width: 100%;
+		background: #eee;
+		border: 1px solid #d9d9d9;
+		/*-webkit-appearance: none;*/
+		}
+}
+
+
+/* Buttons
+-------------------------------------------------- */
+
+.btn {
+	display: inline-block;
+	vertical-align: middle;
+	margin: 0;
+	padding: .9em 2.25em;
+	white-space: nowrap;
+	font-family: "freight-sans-pro", sans-serif;
+	font-size: 16px;
+	font-size: 1.6rem;
+	font-weight: 500;
+	letter-spacing: 2px;
+	color: #333;
+	text-align: center;
+	text-decoration: none;
+	text-transform: uppercase;
+	background: #eee;
+	cursor: pointer;
+	border-radius: 4px;
+	}
+
+.btn:hover, .btn:focus, .btn:active {
+	text-decoration: none;
+	}
+
+.work .btn{
+	color: #fff;
+	background: #3a9dcd;
+}
+.work .btn:hover, .work .btn:focus, .work .btn:active {
+	/* lighter color */
+	}
+.about .btn {
+	color: #fff;
+	background: #d24334;
+	}
+.about .btn:hover, .about .btn:focus, .about .btn:active {
+	/* lighter color */
+	}
+.blog .btn {
+	color: #fff;
+	background: #97b92b;
+	}
+.blog .btn:hover, .blog .btn:focus, .blog .btn:active {
+	/* lighter color */
+	}
+.contact .btn {
+	color: #fff;
+	background: #9b60c2;
+	}
+.contact .btn:hover, .contact .btn:focus, .contact .btn:active {
+	/* lighter color */
+	}
+
+
+.btn-outlined {
+	padding: 1em 2em;
+	color: #333;
+	background: none;
+	border: 2px solid #333;
+	border-radius: 0;
+	}
+
+.work .btn-outlined{
+	color: #3a9dcd;
+	border-color: #3a9dcd;
+	background: none;
+}
+.about .btn-outlined{
+	color: #d24334;
+	border-color: #d24334;
+	background: none;
+}
+.blog .btn-outlined{
+	color: #97b92b;
+	border-color: #97b92b;
+	background: none;
+}
+.contact .btn-outlined{
+	color: #9b60c2;
+	border-color: #9b60c2;
+	background: none;
+}
+.work-bg .btn-outlined, .about-bg .btn-outlined, .blog-bg .btn-outlined, .contact-bg .btn-outlined{
+	color: #fff;
+	border-color: #fff;
+	background: none;
+}
+/* full width of the container */
+.btn-full {
+	width: 100%;
+	}
+
+
+/* Layout
+-------------------------------------------------- */
+
+/* generic content container - full page width */
+.section {
+	position: relative;
+	padding: 4em 0;
+	width: 100%;
+	}
+
+/* section-border- leading sections that need a border */
+.section-border{
+	border: 2px solid #f2f2f2;
+	margin: 20px;
+	width: auto;
+}
+
+/* less padding for blog section */
+.section-blog{
+	padding: 2em 0;
+}
+
+.wrapper {
+    position: relative;
+    /* remove the margin at >= 1280 or eliminate max-width */
+    margin: 0 10%;
+    /*max-width: 1280px;*/
+	}
+
+.wrapper-small {
+	margin: 0 auto;
+	max-width: 940px;
+	}
+
+.wrapper-large {
+	margin: 0 2%;
+	max-width: none;
+	}
+
+.wrapper-blog{
+	margin: 0 auto;
+	max-width: 800px;
+	position: relative;
+}
+.home-section {
+    padding: 20rem 0;
+	}
+
+/* Site Header (logo and navigation only)
+-------------------------------------------------- */
+
+.site-header {
+    height: 100px;
+    margin-top: 36px;
+    position: relative;
+    z-index: 50;
+}
+
+.site-header h1{
+    position: absolute;
+    display: block;
+}
+.site-header h1 a {
+    display: block;
+    /*width: 250px;
+    height: 100px;
+    background-color: white;*/
+}
+
+/* Styles specific to sticky nav */
+.site-header.sticky{
+    background-color: #191919;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    margin-top: 0;
+}
+
+/* Site Naviation */
+
+.site-header.sticky .site-nav a{
+	border: 2px solid #191919;
+}
+.site-header.sticky .site-nav a.active{
+	border: 2px solid #fff;
+}
+.site-nav{
+	width: 100%;
+	margin: 0;
+	padding: 30px 0;
+	text-align: right;
+    font-family: "freight-sans-pro", sans-serif;
+	font-size: 17px;
+	font-size: 1.7rem;
+	font-weight: 500;
+	letter-spacing: 2px;
+	overflow: auto;
+	text-transform: uppercase;
+}
+.site-nav li{
+	list-style-type: none;
+	display: inline-block;
+}
+.site-nav a{
+	color: #fff;
+	text-decoration: none;
+	padding: 5px 7px;
+	margin-right: 10px;
+}
+.site-nav a.active{
+	border: 2px solid #fff;
+}
+.site-nav a.last{
+	margin-right: 0;
+}
+
+
+.nav-tbi.sticky-logo{
+	/* For TBI Logo Sticky nav */
+}
+
+
+/* Site Footer
+-------------------------------------------------- */
+
+.site-footer {
+	padding-top: 50px;
+	text-align: center;
+	background: #000;
+	}
+
+.site-footer .logo {
+	/* allow space for social icons to fit with 50px between logo and icons */
+	display: inline-block;
+	margin-bottom: 70px;
+	width: 142px;
+	height: 56px;
+	}
+
+.site-footer .logo a {
+	width: 100%;
+	height: 100%;
+	}
+
+.site-footer address {
+	font-style: normal;
+	}
+
+.social-footer {
+	position: relative;
+	top: -50px;
+	margin: 0 0 10px 0;
+	padding: 0;
+	}
+
+.social-footer > li {
+	list-style-type: none;
+	display: inline-block;
+	padding: 0 5px;
+	height: 19px;
+	background: #444;
+	}
+
+.social-footer > li a {
+	color: #fff;
+	}
+
+.cta-footer {
+	position: relative;
+	top: 10px;
+	font-family: "freight-sans-pro", sans-serif;
+	font-size: 13px;
+	font-size: 1.3rem;
+	color: #999;
+	}
+
+.cta-footer a,
+.cta-footer .tel {
+	font-weight: 600;
+	color: #fff;
+	}
+
+.copyright {
+	position: relative;
+	top: -26px;
+	padding-bottom: 5px;
+	font-size: 9px;
+	font-size: .9rem;
+	color: #666;
+	}
+
+
+
+
+/* Call Outs
+-------------------------------------------------- */
+
+.callout{
+	margin: 0 auto;
+	max-width: 880px;
+	text-align: center;
+}
+.callout h2{
+	color: #ccc;
+	text-transform: uppercase;
+	font-weight: 500;
+	letter-spacing: 2px;
+}
+.callout p{
+	font-size: 45px;
+	font-size: 4.5rem;
+	line-height: 1.25;
+}
+.callout strong{
+}
+
+/* Call out on colored background */
+
+.callout-colored{
+	color: #fff;
+}
+.callout-colored p{
+	opacity: 0.9;
+}
+.callout-colored h2{
+	color: #fff;
+	opacity: 0.5;
+}
+.callout-border{
+	position: relative;
+	padding: 1.25em 1.5em 2em 1.5em;
+	max-width: none;
+	border: 2px solid #eee;
+}
+
+/* Adds arrow to bottom border of the quote box,
+   needs another color for the offwhite background */
+
+.callout-border:after, .callout-border:before {
+	bottom: -2px;
+	left: 50%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+}
+
+.callout-border:after {
+	border-color: rgba(255, 255, 255, 0);
+	border-bottom-color: #fff;
+	border-width: 14px;
+	margin-left: -14px;
+}
+.light-bg .callout-border:after {
+	border-bottom-color: #f8f8f8;
+}
+.callout-border:before {
+	border-color: rgba(238, 238, 238, 0);
+	border-bottom-color: #eee;
+	border-width: 17px;
+	margin-left: -17px;
+}
+
+
+/* For big quotes */
+.callout-logo{
+	margin: 1em 0;
+}
+.callout blockquote{
+	font-family: "freight-sans-pro", sans-serif;
+	color: #666;
+	font-size: 42px;
+	font-size: 4.2rem;
+	font-weight: 300;
+	line-height: 1.5;
+	padding: 0;
+	margin: 0 0 .5em 0;
+}
+.callout-author{
+	font-family: "freight-sans-pro", sans-serif;
+	font-size: 16px;
+	font-size: 1.6rem;
+	font-weight: 400;
+	color: #ccc;
+	text-transform: uppercase;
+	}
+
+/* callout-intro  - section intros with gear icon above the heading */
+.callout-intro {}
+
+.callout-intro .callout-headline {}
+
+.callout-intro .callout-headline:before {
+	content: "*";
+	display: block;
+	margin-bottom: 2em;
+	height: 10px;
+	width: 100%;
+	color: #000;
+	text-align: center;
+	}
+
+/* Team Member Profile
+-------------------------------------------------- */
+
+.callout-profile {
+	color: #666;
+	}
+
+.callout-profile .profile-img {
+	margin: -260px 0 60px 0;
+	}
+
+
+.list-profile-social {
+	text-align: center;
+	}
+
+.list-profile-social > li {
+	margin: 0 .25em;
+	}
+
+.list-recent-articles {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	}
+
+.list-recent-articles > li {
+	text-align: center;
+	}
+
+.list-recent-articles .article-title {
+	margin-bottom: .25em;
+	font-family: "freight-sans-pro", sans-serif;
+	font-weight: 700;
+	}
+
+.list-recent-articles .article-meta {
+	margin-bottom: 3em;
+	font-size: 17px;
+	font-size: 1.7rem;
+	color: #666;
+	}
+
+.list-recent-articles .article-meta .author {
+	font-style: italic;
+	color: #666;
+	text-decoration: underline;
+	}
+
+/* Card
+-------------------------------------------------- */
+
+.card {
+	padding: 35px 16px;
+	background: #fff;
+	}
+
+.card :last-child {
+	margin-bottom: 0;
+	}
+
+.locations {
+	margin-top: -200px;
+	}
+
+.location-heading {
+	margin-bottom: 1.5em;
+	font-weight: 600;
+	}
+
+.about-content .location-heading {
+	color: #d24334;
+	}
+
+.locations .card {
+	display: inline-block;
+	margin-left: 1.4%;
+	width: 48.9%;
+	}
+
+.locations .card-body {
+	padding: 0 4%;
+	}
+
+.locations .card:first-child {
+	margin-left: 0;
+	}
+
+.locations .card img {
+	margin-bottom: 1em;
+	}
+
+
+/* Story
+-------------------------------------------------- */
+
+.story {
+	margin: 0 auto;
+	margin-bottom: 1.2em;
+	padding-top: 50px;
+	width: 780px;
+	color: #ccc;
+	text-align: center;
+	}
+
+.story-img {
+	z-index: 5;
+	position: absolute;
+	top: -115px;
+	left: 50%;
+	margin-bottom: 40px;
+	margin-left: -115px;
+	}
+
+.story-headline {
+	margin-bottom: 2.25em;
+	font-family: "freight-sans-pro", sans-serif;
+	font-size: 16px;
+	font-size: 1.6rem;
+	font-weight: 600;
+	}
+
+.story-body {
+	text-align: left;
+	}
+
+
+/* Teaser
+-------------------------------------------------- */
+/* blog post and case study teaser blocks */
+
+/* may want to set the padding in %s so it scales, or alter at breakpoints */
+.teaser {
+	position: relative;
+	padding: 50px 55px;
+	min-height: 317px;
+	background: #555;
+	}
+
+.teaser-headline {
+	margin-bottom: .5em;
+	width: 60%;
+	font-size: 48px;
+	font-size: 4.8rem;
+	font-weight: 700;
+	line-height: 1.25;
+	color: #fff;
+	text-align: left;
+	text-transform: none;
+	}
+
+.teaser-body {
+	color: #ccc;
+	}
+
+.teaser .btn {
+	position: absolute;
+	right: 50px;
+	bottom: 50px;
+	padding: .9em 2.25em;
+	}
+
+.teaser .author {
+	font-style: italic;
+	}
+
+.teaser .author a {
+	color: #ccc;
+	text-decoration: underline;
+	}
+
+.teaser .client {
+	position: absolute;
+	left: 48px;
+	bottom: 48px;
+	font-family: "freight-sans-pro", sans-serif;
+	font-size: 14px;
+	font-size: 1.4rem;
+	font-weight: 600;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	}
+
+/* larger (vertically) version of teaser */
+/* TODO: Consider a name change for this */
+/* TODO: Need a version of the teaser that's taller than wide (in a group) */
+.teaser-large {
+	padding: 75px 95px;
+	background: #333;
+	}
+
+.teaser-large .btn {
+	position: static;
+	}
+
+.teaser-large p {
+	margin-bottom: 1.5em;
+	}
+
+/* group of teasers */
+.teaser-group {
+		overflow: hidden;
+		margin-bottom: 1.5em;
+	}
+
+.teaser-group .teaser{
+	width: 50%;
+	float: left;
+}
+
+/* group of teasers in small-big-small format*/
+.teaser-group.sbs .teaser {
+	float: left;
+	width: 31%;
+	padding: 50px 25px;
+	margin-top: 25px;
+	}
+.teaser-group.sbs .teaser-featured {
+	float: left;
+	width: 38%;
+	margin-top: 0;
+	padding: 75px 50px;
+	min-height: 367px;
+	}
+
+.teaser-group.sbs .teaser-headline {
+	width: 100%;
+	text-align: center;
+	}
+.teaser-group.sbs .teaser-body {
+	width: 100%;
+	text-align: center;
+	}
+.teaser-group.sbs .teaser .btn {
+	position: relative;
+	right: inherit;
+	bottom: inherit;
+	}
+.teaser-group.sbs .teaser .client {
+	position: relative;
+	text-align: center;
+	right: inherit;
+	bottom: inherit;
+	left: inherit;
+	}
+
+/* Specific to teaser groups that have only a headline */
+
+.teaser-group.teaser-group-headlines h3.headline{
+	position: absolute;
+	color: #fff;
+	font-family: "freight-sans-pro", sans-serif;
+	font-size: 24px;
+	font-size: 2.4rem;
+	font-weight: 600;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	margin: 0 auto;
+	top: 45%;
+	right: 0;
+	left: 0;
+}
+.teaser-group.teaser-group-headlines  .teaser{
+	min-height: 350px;
+}
+.teaser-group.teaser-group-headlines  .teaser-featured{
+	min-height: 400px;
+}
+
+/* Figure
+-------------------------------------------------- */
+
+.figure {
+	margin-bottom: 1em;
+	text-align: center;
+	}
+
+.figure img {
+	margin-bottom: .5em;
+	}
+
+.figure-caption {
+	font-family: "freight-sans-pro", sans-serif;
+	font-size: 16px;
+	font-size: 1.6rem;
+	font-weight: 400;
+	}
+
+/* Media Block
+-------------------------------------------------- */
+/* 	Common content pattern with image left, content
+	right. Stacked version puts the image on top,
+	all content centered, img-rt modifier moves the
+	image to the right.
+*/
+
+.media {
+	display: block;
+	overflow: hidden;
+	}
+
+.media-img {
+	float: left;
+	margin-right: .5em;
+	}
+
+.media-img-rt {
+	float: right;
+	margin-left: 5em;
+	}
+
+.media-body {
+	overflow: hidden;
+	}
+
+.media-stacked {
+	text-align: center;
+	}
+
+.media-stacked .media-img {
+	float: none;
+	display: inline-block;
+	margin-bottom: 1em;
+	}
+
+
+/* Blog
+-------------------------------------------------- */
+
+.post-content > p:first-child{
+	font-size: 45px;
+	font-size: 4.5rem;
+}
+
+.post-title-info{
+	text-align: center;
+	font-style: italic;
+
+}
+.post-title-info .post-title{
+	font-size: 39px;
+	font-size: 3.9rem;
+	font-weight: 600;
+	font-style: normal;
+	font-family: "freight-sans-pro", sans-serif;
+	line-height: 1.25;
+}
+
+/* post footer */
+.post-footer {
+	position: relative;
+	overflow: visible;
+	padding: 0;
+	}
+
+.post-footer h3{
+	text-align: left;
+	text-transform: none;
+	font-weight: 600;
+	font-size: 24px;
+	font-size: 2.4rem;
+}
+
+.post-info{
+	text-align: center;
+}
+.post-categories {
+	font-family: "freight-text-pro", serif;
+	font-weight: 400;
+	font-style: italic;
+	font-size: 14px;
+	font-size: 1.4rem;
+	line-height: 1.3;
+	color: #666;
+	text-align: left;
+	padding: 2em 0;
+	border-bottom: 2px solid #efefef;
+	}
+
+.post-categories a {
+	color: #97b92b;
+	text-decoration: underline;
+	}
+
+.post-share {
+	position: absolute;
+	right: 0;
+	top: 2.5em;
+	font-family: "freight-sans-pro", sans-serif;
+	font-weight: 400;
+	font-size: 14px;
+	font-size: 1.4rem;
+	line-height: 1.3;
+	}
+
+.post-share a {
+	display: inline-block;
+	color: #97b92b;
+	text-align: right;
+	}
+
+/* post author */
+
+.post-footer .post-author {
+	margin: 2em auto;
+	width: 40%;
+	}
+
+
+.post-author-body {
+	}
+
+.post-author p {
+	margin-bottom: 0;
+	}
+
+.post-author .byline {
+	font-style: italic;
+	font-weight: 300;
+	}
+
+.post-author .byline a {
+	color: #333;
+	text-decoration: underline;
+	}
+
+.post-author .title,
+.post-author .view-more {
+	font-family: "freight-sans-pro", sans-serif;
+	font-weight: 400;
+	}
+.post-author .title{
+	text-transform: uppercase;
+	font-size: 16px;
+	font-size: 1.6rem;
+	letter-spacing: 1px;
+}
+.post-author .view-more{
+	font-size: 18px;
+	font-weight: 1.8rem;
+}
+.post-author .view-more a {
+	/*color: #ccc;*/
+	}
+
+/* Post Comments */
+
+.list-comments{
+	margin: 0;
+	padding: 0;
+}
+.list-comments > li{
+	list-style-type: none;
+	border-bottom: 2px solid #efefef;
+	padding-top: 1em;
+}
+.list-comments > li:first-child{
+	border-top: 2px solid #efefef;
+}
+.comment-info{
+	color: #bcbcbc;
+	font-size: 20px;
+	font-size: 2rem;
+}
+.comment-info .author{
+	color: #333;
+	font-style: italic;
+}
+.comment-info .date{
+	font-size: 18px;
+	font-size: 1.8rem;
+}
+
+/* Post Footer Nav */
+.post-footer-cta{
+	text-align: center;
+	margin: 2em 0;
+}
+.post-footer-nav{
+	padding: .5em 0;
+	border-top: 2px solid #efefef;
+	border-bottom: 2px solid #efefef;
+	overflow: hidden;
+	display: table;
+	margin: 0 auto;
+}
+.post-footer-nav > li{
+	list-style-type: none;
+	padding: .5em 1em;
+	display: table-cell;
+	width: 50%;
+}
+.post-footer-nav > li:first-child{
+	border-right: 2px solid #efefef;
+}
+.post-footer-nav > li h4{
+	font-size: 15px;
+	font-size: 1.5rem;
+}
+.post-footer-nav > li p a{
+	font-family: "freight-sans-pro", sans-serif;
+	font-weight: 600;
+}
+
+/* Navigation at the bottom of the main blog page */
+.blog-main-footer-nav{
+	border-bottom: 2px solid #efefef;
+	padding: 1.5em 0 2em 0;
+	margin-bottom: 2em;
+	overflow: hidden;
+}
+.blog-main-footer-nav a{
+	float: right;
+	font-family: "freight-sans-pro", sans-serif;
+}
+.blog-main-footer-nav a:first-child{
+	float: left;
+}
+/* Blog Footer Call to Action */
+
+.blog-footer-cta{
+	overflow: hidden;
+}
+.blog-footer-cta .post-list {
+	width: 50%;
+	float: left;
+	margin: 0 auto;
+	padding: 0 2%;
+}
+.blog-footer-cta .post-list > li{
+	list-style-type: none;
+	line-height: 1;
+	padding-bottom: .75em;
+}
+.blog-footer-cta .post-list > li h4{
+	font-size: 24px;
+	font-size: 2.4rem;
+	font-weight: 600;
+	text-align: left;
+	margin: 0;
+}
+.blog-footer-cta .post-list > li a{
+	font-family: "freight-sans-pro", sans-serif;
+	font-size: 20px;
+	font-size: 2rem;
+}
+
+/* Blog Post List for Archives and team pages */
+
+.blog-post-list{
+	margin: 0;
+	padding: 0;
+	text-align: center;
+}
+.blog-post-list > li{
+	list-style-type: none;
+	padding-bottom: .4em;
+}
+.blog-post-list .post-title{
+	font-family: "freight-sans-pro", sans-serif;
+	margin-bottom: .4em;
+	font-weight: 600;
+}
+.blog-post-list .post-meta{
+	font-size: 17px;
+	font-size: 1.7rem;
+	color: #666;
+}
+.blog-post-list .post-meta a{
+	color: #666;
+	text-decoration: underline;
+	font-style: italic;
+}
+
+.year-divider{
+	width: 100%;
+	margin: 2em 0;
+	height: 24px;
+	position: relative;
+	font-size: 24px;
+	font-style: italic;
+	color: #ccc;
+	border-top: 2px solid #efefef;
+	text-align: center;
+}
+.year-divider p{
+	position: absolute;
+	top: -20px;
+	width: 100%;
+	text-align: center;
+}
+.year-divider p span{
+	background-color: #fff;
+	padding: 0 10px;
+}
+
+/* Colors
+-------------------------------------------------- */
+
+/*
+
+OFFICIAL COLORS:
+work: blue #3a9dcd;
+about: red #d24334;
+contact: purple #9b60c2;
+blog: green #97b92b;
+
+*/
+
+/* Section Background Colors */
+.work-bg{
+	background: #3a9dcd;
+}
+.about-bg{
+	background: #d24334;
+}
+.contact-bg{
+	background: #9b60c2;
+}
+.blog-bg{
+	background: #97b92b;
+}
+.light-bg{
+	background-color: #f8f8f8;
+}
+
+/* Colored Text Instances */
+.work .callout-message, .work blockquote, .work .grid-callout a, .work-content a, .work-content h2{
+	color: #3a9dcd;
+}
+.about .callout-message, .about blockquote, .about-content a, .about-content h2{
+	color: #d24334;
+}
+.contact .callout-message, .contact blockquote, .contact-content a, .contact-content h2{
+	color: #9b60c2;
+}
+.blog .callout-message, .blog blockquote, .blog-content a, .blog-content h2{
+	color: #97b92b;
+}
+
+.work-bg .callout-message, .about-bg .callout-message, .contact-bg .callout-message, .blog-bg .callout-message{
+	color: #fff;
+}
+
+/* Background Images
+-------------------------------------------------- */
+/* Full background images */
+
+.bg-img{
+	background-size: cover;
+}
+.bg-img-services{
+	background-image: url(../img/HuggleFromAbove.png);
+}
+.bg-img-ourstory{
+	background-image: url(http://placehold.it/1200x430/333/444);
+}
+.bg-teaser-test{
+	background-image: url(http://placehold.it/300/333/444);
+}
+.bg-teaser-test2{
+	background-image: url(http://placehold.it/300/222/333);
+}
+
+
+/* Call to Action Links
+-------------------------------------------------- */
+/* link | link | link - fills container width */
+
+.list-cta-links {
+	width: 100%;
+	margin: 0 auto;
+	max-width: 880px;
+	display: table;
+	padding: 1em 0;
+	}
+
+.list-cta-links > li {
+	display: table-cell;
+	vertical-align: middle;
+	margin: 0;
+	padding: 0 1em;
+	list-style-type: none;
+	font-family: "freight-sans-pro", sans-serif;
+	line-height: 1.2;
+	text-align: center;
+	}
+
+.list-cta-links > li > a { color: #fff; }
+
+/* List Image Grid
+-------------------------------------------------- */
+/* Grid of circles for headshots and client logos */
+.list-grid{
+	text-align: center;
+	margin: 0;
+	padding: 0;
+}
+.list-grid > li{
+	display: inline-block;
+	position: relative;
+	width: 230px;
+	height: 230px;
+	list-style-type: none;
+	background-color: #fff;
+	border-radius: 50%;
+}
+.list-grid > li > img{
+	position: absolute;
+	margin: auto;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 2;
+}
+.grid-callout a{
+	color: #bbb;
+}
+
+/* Styles specific to client grid*/
+.grid-clients > li{
+	border: 2px solid #e6e6e6;
+	overflow: hidden;
+}
+.grid-callout-clients a{
+	position: absolute;
+	display: block;
+	width: 100px;
+	font-size: 16px;
+	font-size: 1.6rem;
+	line-height: 18px;
+	text-align: center;
+	text-transform: uppercase;
+	margin: 0 auto;
+	left: 0;
+	right: 0;
+	bottom: 5px;
+}
+.grid-callout-clients:before{
+	content: " ";
+	position: absolute;
+	width: 230px;
+	height: 50px;
+	background-color: #f6f6f6;
+	left: 0;
+	bottom: 0;
+}
+
+/* Styles specific to blue background grid */
+.work-bg .grid-clients > li{
+	border: none;
+	background: #3295c5;
+}
+
+.work-bg .grid-callout-clients:before{
+	background: #2989b7;
+}
+
+.work-bg .grid-callout-clients a{
+	color: #fff;
+}
+
+/* Styles specific to team grid*/
+.grid-team > li.grid-callout-team{
+	border: 2px solid #e6e6e6;
+	position: relative;
+}
+.grid-team > li > img{
+	border-radius: 50%;
+}
+.grid-callout-team-message{
+	position: absolute;
+	margin: 0 auto;
+	right: 0;
+	left: 0;
+	top: 85px;
+}
+.grid-callout-team-message-main{
+	color: #d24334;
+}
+.grid-callout-team a{
+	display: block;
+	font-size: 16px;
+	font-size: 1.6rem;
+}
+.grid-team-bio{
+	position: absolute;
+	margin: 0 auto;
+	right: 0;
+	left: 0;
+	top: 50px;
+	width: 165px;
+	color: #fff;
+	z-index: 3;
+}
+.grid-team-name{
+	font-family: "freight-sans-pro", Arial, sans-serif;
+	font-weight: 800;
+	font-size: 30px;
+	font-size: 3rem;
+	line-height: 1;
+	margin-bottom: 15px;
+}
+.grid-team-title{
+	font-size: 18px;
+	font-size: 1.8rem;
+	line-height: 1.25;
+}
+
+/* Contact Group
+-------------------------------------------------- */
+
+.contact-group{
+	text-align: center;
+}
+.contact-group{
+	overflow: hidden;
+}
+.contact-subgroup h4{
+	font-size: 24px;
+	font-size: 2.4rem;
+	font-weight: 500;
+	text-transform: uppercase;
+	color: #ccc;
+	letter-spacing: 2px;
+	margin: 3rem 0 0 0;
+}
+.contact-subgroup h3{
+	font-size: 30px;
+	font-size: 3rem;
+	font-weight: 600;
+	text-transform: none;
+	margin: 0;
+}
+/* Contact-main and contact-location need to break for small */
+.contact-main{
+	padding: 0 1em;
+}
+.contact-subgroup{
+	border-bottom: 2px solid #dadada;
+}
+.contact-locations{
+	overflow: hidden;
+}
+.contact-location{
+	padding: 1em 2em;
+	float: right;
+}
+.contact-location:first-child{
+	float: left;
+}
+.contact-group a.phone{
+	display: block;
+	font-size: 100px;
+	font-size: 10rem;
+	color: #333;
+	line-height: 1.2;
+	margin-bottom: 2rem;
+}
+.contact-group address{
+	font-style: normal;
+	font-size: 20px;
+	font-size: 2rem;
+	color: #9b60c2;
+}
+.contact-bg .contact-group address, .contact-bg .contact-group a.phone, .contact-bg .contact-subgroup h3{
+	color: #fff;
+}
+/* contact-home - contact group only on home page */
+.contact-group.contact-home{
+	border: 2px solid #dadada;
+	}
+.contact-group.contact-home h4{
+	color: #fff;
+	opacity: 0.5;
+}
+.contact-group.contact-home .contact-main{
+	width: 65%;
+	float: left;
+}
+.contact-group.contact-home .contact-subgroup{
+	border: 0 none;
+}
+.contact-group.contact-home .contact-locations{
+	width: 35%;
+	border-left: 2px solid #dadada;
+	float: right;
+	min-width: 310px;
+}
+.contact-group.contact-home .contact-location{
+	float: none;
+}
+.contact-group.contact-home .contact-location:first-child{
+	border-bottom: 2px solid #dadada;
+	float: none;
+}
+
+/* List Services
+-------------------------------------------------- */
+/* Very preliminary, needs edits to fit home and work pages */
+
+.list-services{
+	text-align: center;
+	margin: 0;
+	padding: 0;
+}
+.list-services li{
+	display: inline-block;
+	list-style-type: none;
+	margin: 0 10px;
+	padding: 0;
+	width: 160px;
+	vertical-align: top;
+}
+.list-services h4{
+	font-size: 16px;
+	font-size: 1.6rem;
+	font-weight: 600;
+	line-height: 1;
+	margin-top: 1.4em;
+}
+
+/* Helpers
+-------------------------------------------------- */
+.centered{
+	text-align: center;
+}
+.left{
+	float: left;
+}
+.right{
+	float: right;
+}
+.ib{
+	display: inline-block;
+}
+.sans{
+	font-family: "freight-sans-pro", sans-serif;
+}
+.serif{
+	font-family: "freight-text-pro", serif;
+}
+
+.circle {
+	border-radius: 50%;
+	}
+
+/* Hide only visually, but have it available for screenreaders */
+.visually-hidden {
+	position: absolute !important;
+	margin: -1px;
+	padding: 0;
+    width: 1px;
+    height: 1px;
+    border: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+    }
+
+
+/* Content header
+-------------------------------------------------- */
+
+.content-header {
+    margin-top: -136px;
+    padding: 200px 0 190px 0;
+    text-align: center;
+    background-size: cover;
+}
+
+.content-header.content-header-sticky {
+	margin-top: 56px;
+}
+
+.content-header > * {
+	margin: 0 auto;
+	max-width: 800px;
+	}
+
+.content-header h1 {
+    font-size: 24px;
+    font-size: 2.4rem;
+    font-weight: 500;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #fff;
+    opacity: 0.5;
+    line-height: 2;
+    margin-top: 5px;
+}
+.content-header p {
+	font-family: "freight-sans-pro", sans-serif;
+    font-size: 55px;
+    font-size: 5.5rem;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.25;
+}
+.content-header.blog-single .header-info{
+	font-family: "freight-text-pro", serif;
+	font-size: 26px;
+	font-size: 2.6rem;
+	font-weight: 300;
+	color: #cccccc;
+	margin-top: 2em;
+}
+.content-header.blog-single .header-info .author{
+	font-style: italic;
+}
+.content-header.blog-single .header-info .author a{
+	font-style: italic;
+	color: #cccccc;
+	text-decoration: underline;
+}
+
+.about-single .header-title{
+	margin-bottom: .2em;
+}
+
+.about-single .header-info{
+	font-family: "freight-text-pro", serif;
+	font-size: 26px;
+	font-size: 2.6rem;
+	font-weight: 300;
+	color: #cccccc;
+	font-style: italic;
+}
