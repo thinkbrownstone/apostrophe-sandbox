@@ -86,13 +86,13 @@ $(function() {
         if ($('.site-header').length) {
             var nav = new StickyElement($('.site-header'), {
                 $stickyEl: $('.site-header'),
-                className : 'opaque',
+                className : 'narrow',
                 startAltStyle : $('.site-header').offset().top + $('.site-header').height(),
                 addSpecialClass : function() {
-                    this.element.addClass('opaque');
+                    this.element.addClass(this.className);
                 },
                 removeSpecialClass: function() {
-                    this.element.removeClass('opaque');
+                    this.element.removeClass(this.className);
                 }
             });
         }
