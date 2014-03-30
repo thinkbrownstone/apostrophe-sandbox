@@ -1,21 +1,69 @@
-@import 'reset.less';
+@import 'normalize.less';
 @import 'fonts.less';
 @import 'mixins.less';
 @import 'defaults.less';
-@import 'templates.less';
-@import 'global.less';
+// @import 'templates.less';
+// @import 'global.less';
 @import 'login.less';
 @import 'search.less';
-@import 'homepage.less';
-@import 'blog.less';
-@import 'sections.less';
-@import 'map.less';
-@import 'responsive.less';
-@import 'lockups.less';
+// @import 'homepage.less';
+// @import 'blog.less';
+// @import 'sections.less';
+// @import 'map.less';
+// @import 'responsive.less';
+// @import 'lockups.less';
 
-@import 'bootstrap/bootstrap.less';
+// main styles
+@import 'tbi/all.less';
+@import 'shapes-sprites.css';
+
+// responsive styles
+@import 'tbi/small.less';
+@import 'tbi/medium.less';
+@import 'tbi/full.less';
+
 
 // You can redefine all the apos mixins even as late as this, and they apply
 // retroactively to all the LESS already loaded, thanks to the two-pass
 // compilation of LESS
 // @apos-base: rgb(192, 50, 255);
+
+.apos-admin-bar {
+    position: fixed;
+    top: 0;
+    z-index: 801;
+}
+
+.logged-in .site-header.sticky {
+    top: 40px;
+    background-color: transparent;
+}
+
+.site-header {
+    .site-nav {
+        .transition( all 0.3s ease-in-out);
+    }
+}
+
+.site-header.sticky.narrow {
+    height: 60px;
+    background-color: #191919;
+    .site-nav {
+        padding: 17px 0;
+    }
+    .tbi-logo-large {
+        display: none;
+    }
+}
+
+.site-header .tbi-logo-large {
+    margin-top: -60px;
+}
+
+.main-navigation + div .apos-ui-container:first-of-type {
+    margin-top: 160px;
+}
+
+span.client-featured {
+
+}
