@@ -40,16 +40,6 @@ $(function() {
     /* Site-wide JS goes here
     ------------------------------------------------------------ */
 
-    function setToWindowHeight(el) {
-        if(!$(el).length) {
-            return;
-        }
-
-        var el = $(el);
-        var windowHeight = $(window).height();
-        el.height(windowHeight);
-    }
-
     /*
         applies a class to an element at a specified window scroll position, throttled to check every 50ms
         onStart and onEnd events to apply different styling
@@ -57,10 +47,9 @@ $(function() {
     var StickyElement = function (element, data) {
         this.element = element;
         this.className = data.className;
-        this.startPosition = data.startPosition || 0;
-        this.endPosition = data.endPosition || null;
-        this.onStart = data.onStart || function () { };
-        this.onEnd = data.onEnd || function () { };
+        this.startAltStyle = data.startAltStyle || 0;
+        this.addSpecialClass = data.addSpecialClass || function () { };
+        this.removeSpecialClass = data.removeSpecialClass || function () { };
         this.throttleDuration = data.throttle || 50;
         this.isThrottled = false;
 
@@ -86,44 +75,24 @@ $(function() {
 
     StickyElement.prototype.checkScroll = function () {
         var winScroll = $(window).scrollTop();
-        if (winScroll >= this.startPosition) {
-            if (this.endPosition !== null) {
-                if (winScroll <= this.endPosition) {
-                    if (!this.element.hasClass(this.className)) {
-                        this.element.addClass(this.className);
-                        this.onStart.call();
-                    }
-                } else {
-                    if (this.element.hasClass(this.className)) {
-                        this.element.removeClass(this.className);
-                        this.onEnd.call();
-                    }
-                }
-            } else {
-                if (!this.element.hasClass(this.className)) {
-                    this.element.addClass(this.className);
-                    this.onStart.call();
-                }
-            }
+        if (winScroll >= this.startAltStyle) {
+            this.addSpecialClass();
         } else {
-            if (this.element.hasClass(this.className)) {
-                this.element.removeClass(this.className);
-                this.onEnd.call();
-            }
+            this.removeSpecialClass();
         }
     };
 
     (function($){
-        setToWindowHeight('.content-header-home');
         if ($('.site-header').length) {
             var nav = new StickyElement($('.site-header'), {
-                className : 'sticky',
-                startPosition : $('.site-header').offset().top + $('.site-header').height(),
-                onStart : function() {
-                    $('.content-header').addClass('content-header-sticky');
+                $stickyEl: $('.site-header'),
+                className : 'opaque',
+                startAltStyle : $('.site-header').offset().top + $('.site-header').height(),
+                addSpecialClass : function() {
+                    this.element.addClass('opaque');
                 },
-                onEnd : function() {
-                    $('.content-header').removeClass('content-header-sticky');
+                removeSpecialClass: function() {
+                    this.element.removeClass('opaque');
                 }
             });
         }
