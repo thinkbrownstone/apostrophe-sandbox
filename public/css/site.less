@@ -156,31 +156,60 @@ div.banner-case-study-large {
 
 // @TODO don't use "teaser-featured" CSS class, that should be nth-of-type with fallback
 
-.teaser-group.sbs .teaser {
-    width: 33%;
-    background-position: center center;
-    height: 450px;
-    .teaser-headline {
-        font-size: 30px;
-        font-size: 3rem;
-    }
-    &:nth-of-type(2) {
-        max-height: 120%;
-        margin-top: -30px;
-        height: 530px;
-    }
-    .bottom-anchor {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        padding-bottom: 30px;
-    }
-    .view-more-link {
-        margin-top: 40px;
+.teaser-group.sbs {
+    .teaser {
+        width: 33%;
+        background-position: center center;
+        height: 450px;
+        .teaser-headline {
+            font-size: 30px;
+            font-size: 3rem;
+        }
+        .bottom-anchor {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding-bottom: 30px;
+        }
+        .view-more-link {
+            margin-top: 40px;
+        }
+        &:first-child + .teaser {
+            max-height: 120%;
+            margin-top: -30px;
+            height: 530px;
+        }
     }
 }
 
 .bg-img-services {
     background-image: url('/images/HuggleFromAbove.png');
+}
+
+.grid-team > li > a {
+    display: block;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+    .grid-team-bio {
+        filter: alpha(opacity=0);
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+        opacity: 0;
+        visibility: hidden;
+    }
+    &:hover {
+        background: #000;
+        .grid-team-bio {
+            filter: alpha(opacity=100);
+            -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+            opacity: 1;
+            visibility: visible;
+        }
+        > img {
+            filter: alpha(opacity=65);
+            -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=65)";
+            opacity: 0.65;
+        }
+    }
 }
