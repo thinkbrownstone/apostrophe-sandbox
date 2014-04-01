@@ -4,8 +4,8 @@ var site = require('apostrophe-site')({
   root: module,
   shortName: 'tbi-apostrophe',
   hostName: 'tbi-apostrope',
-  title: 'Apostrophe Sandbox',
-  sessionSecret: 'apostrophe sandbox demo party',
+  title: 'Think Brownstone',
+  sessionSecret: 'Think Brownstone website on apostrophe',
   adminPassword: 'demo',
 
   locals: {
@@ -63,7 +63,7 @@ var site = require('apostrophe-site')({
       { name: 'blocks', label: 'Blocks' },
       { name: 'marquee', label: 'Marquee' },
       { name: 'home', label: 'Home Page' },
-      { name: 'blog', label: 'Blog' },
+      // { name: 'blog', label: 'Blog' }, // removed because of special singular "content" type
       { name: 'map', label: 'Map' },
       { name: 'groups', label: 'Directory' },
       { name: 'company', label: 'Company' }
@@ -76,17 +76,56 @@ var site = require('apostrophe-site')({
     'apostrophe-ui-2': {},
     'apostrophe-snippets': {},
     'apostrophe-blog': {
-      label: 'Blogs',
-      instanceLabel: 'Blog'
+      label: 'Content',
+      instanceLabel: 'Content Item',
+      addFields: [
+        {
+          name: 'client',
+          label: 'Client Name',
+          type: 'string',
+          before: 'clientLogo'
+        },
+        {
+          name: 'clientLogo',
+          label: 'Client Logo',
+          type: 'singleton',
+          after: 'thumbnail',
+          widgetType: 'slideshow',
+          options: {
+            label: 'Client Logo',
+            limit: 1
+          }
+        }
+      ]
     },
-    // // demonstrates 'Case Study' content type subclass of Blog
-    // 'case': {
+
+    // demonstrates extending a content type / subclassing of Blog
+    // 'tbiContent': {
     //   extend: 'apostrophe-blog',
-    //   name: 'case',
-    //   label: 'Case Studies',
-    //   instance: 'study',
-    //   instanceLabel: 'Case Study',
-    //   menuName: 'aposCaseMenu'
+    //   name: 'tbiContent',
+    //   label: 'Content',
+    //   instance: 'content',
+    //   instanceLabel: 'Content',
+    //   menuName: 'aposContentMenu',
+    //   addFields: [
+    //     {
+    //       name: 'client',
+    //       label: 'Client Name',
+    //       type: 'string',
+    //       before: 'clientLogo'
+    //     },
+    //     {
+    //       name: 'clientLogo',
+    //       label: 'Client Logo',
+    //       type: 'singleton',
+    //       after: 'thumbnail',
+    //       widgetType: 'slideshow',
+    //       options: {
+    //         label: 'Client Logo',
+    //         limit: 1
+    //       }
+    //     }
+    //   ]
     // },
     'apostrophe-people': {
       email: {

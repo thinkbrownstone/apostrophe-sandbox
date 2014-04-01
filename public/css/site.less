@@ -36,12 +36,21 @@
 
 .logged-in .site-header.sticky {
     top: 40px;
+}
+.site-header.sticky {
     background-color: transparent;
+    .tbi-logo-large {
+        display: block;
+        height: 170px;
+        position: absolute;
+        z-index: 1001;
+    }
 }
 
-.site-header {
-    .site-nav {
-        .transition( all 0.3s ease-in-out);
+.site-nav {
+    .transition( all 0.3s ease-in-out);
+    .curent a{
+        border: 2px solid #191919;
     }
 }
 
@@ -64,6 +73,114 @@
     margin-top: 160px;
 }
 
-span.client-featured {
+.home-featured-slides {
+    > li {
+        position: relative;
+        width: 100%;
+        height: 500px;
+        background-size: cover;
+        background-position: center center;
+        background-color: #000;
+    }
+    .inner-content {
+        position: absolute;
+        top: 200px;
+        padding: 100px 70px;
+        width: 100%;
+    }
+    h2 {
+        font-size: 5rem;
+        color: #fff;
+        text-align: center;
+        font-weight: 700;
+    }
+    .secondary-title {
+        font-family: "freight-sans-pro", sans-serif;
+        color: #fff;
+        text-transform: uppercase;
+        font-weight: 600;
+        font-size: 15px;
+        font-size: 1.5rem;
+        letter-spacing: 2px;
+    }
+}
 
+// this shims older no media query browsers to get a 500px tall slider
+// for newer browsers we start off with a large slider and go down
+@media all and (max-height: 9999px) {
+    .home-featured-slides > li {
+        height: 800px;
+    }
+}
+
+// iPad Portrait and smaller (covers mobile)
+@media all and (max-height: 768px) {
+    .home-featured-slides > li {
+        height: 600px;
+    }
+}
+
+// mobile-specific
+@media all and (max-height: 600px) {
+    .home-featured-slides > li {
+        height: 600px;
+    }
+}
+
+
+div.banner-case-study-large {
+    top: 130px;
+    position: absolute;
+    left: 50%;
+    margin-left: -115px;
+    padding-top: 86px;
+    span {
+        color: #fff;
+        font-family: "freight-sans-pro", sans-serif;
+        text-transform: uppercase;
+        font-weight: 200;
+        font-size: 17px;
+        font-size: 1.7rem;
+        letter-spacing: 2px;
+    }
+}
+
+.btn.work {
+    background: #3a9dcd;
+    color: #fff;
+}
+
+.callout strong{
+    font-family: "freight-sans-pro", sans-serif;
+}
+
+// @TODO don't use "teaser-featured" CSS class, that should be nth-of-type with fallback
+
+.teaser-group.sbs .teaser {
+    width: 33%;
+    background-position: center center;
+    height: 450px;
+    .teaser-headline {
+        font-size: 30px;
+        font-size: 3rem;
+    }
+    &:nth-of-type(2) {
+        max-height: 120%;
+        margin-top: -30px;
+        height: 530px;
+    }
+    .bottom-anchor {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        padding-bottom: 30px;
+    }
+    .view-more-link {
+        margin-top: 40px;
+    }
+}
+
+.bg-img-services {
+    background-image: url('/images/HuggleFromAbove.png');
 }

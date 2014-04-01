@@ -16,20 +16,25 @@
 <div class="main-navigation">
   <div class="container">
     <a href="/" class="logo"></a>
-    {% block mainNav %}
-      <ul class="tabs">
-        {% for tab in page.tabs %}
-          {% if tab.slug == page.slug %}
-            <li class="tab current-page">{{ pageLink(tab) }}</li>
-          {% else %}
-            <li class="tab">{{ pageLink(tab) }}</li>
-          {% endif %}
-        {% endfor %}
-      </ul>
-    {% endblock %}
+    <header><div class="site-header sticky" role="banner">
+        <div class="wrapper">
+            <a class="tbi-logo-large" href="/">Think Brownstone</a>
+            <nav>
+            {% block mainNav %}
+              <ul class="site-nav" role="navigation">
+                {% for tab in page.tabs %}
+                  {% if tab.slug == page.slug %}
+                    <li class="tab current-page">{{ pageLink(tab) }}</li>
+                  {% else %}
+                    <li class="tab">{{ pageLink(tab) }}</li>
+                  {% endif %}
+                {% endfor %}
+              </ul>
+            {% endblock %}
+            </nav>
+        </div>
+    </div></header>
   </div>
-
-
 </div>
 {% block headerBody %}
 {% endblock %}
@@ -38,6 +43,7 @@
 {% endblock %}
 
 {% block hero %}
+  <div class="testing-hero"></div>
 {% endblock %}
 
 {% block breadcrumbs %}
@@ -75,35 +81,23 @@
 {# on every page that inherits this one we want to use the global object instead of #}
 {# the page object. #}
 {% block footerBody %}
-  <footer class="footer">
-    {% block footer %}
-    <div class="major block">
-      <div class="inner clearfix">
-        <div class="column">
-          {{ aposArea(global, 'footerContent1', { textOnly: true, controls: ['style', 'italic', 'createLink'] }) }}
+    <footer><div class="site-footer" role="contentinfo">
+        <div class="wrapper">
+            <address>
+                <!--<p class="visually-hidden">Think Brownstone</p>-->
+                <p class="logo"><a href="/"><img src="http://placehold.it/324x128" alt="Think Brownstone"/></a></p>
+                <p class="cta-footer">Give us a call at <span class="tel">800.296.9190</span> or <a href="">send us a message.</a></p>
+            </address>
+            <ul class="social-footer">
+                <li><a href="" class="fb">Facebook</a></li>
+                <li><a href="" class="tw">Twitter</a></li>
+                <li><a href="" class="gp">Google+</a></li>
+                <li><a href="" class="fl">Flickr</a></li>
+                <li><a href="" class="dr">Dribbble</a></li>
+                <li><a href="" class="tw">Twitter</a></li>
+            </ul>
+            <p class="copyright">&copy; 2014 Think Brownstone Inc. All rights reserved.</p>
         </div>
-        <div class="column">
-          {{ aposArea(global, 'footerContent2', { textOnly: true, controls: ['style', 'italic', 'createLink'] }) }}
-        </div>
-        <div class="column">
-          {{ aposArea(global, 'footerContent3', { textOnly: true, controls: ['style', 'italic', 'createLink'] }) }}
-        </div>
-      </div>
-    </div>
-    <div class="minor block">
-      <div class="inner clearfix">
-        <div class="column footer-text">WEBSITES, NOT COFFEE</div>
-        <div class="column">
-          <div class="footer-logos">
-            <a class="twitter-logo footer-logo" href="http://twitter.com/punkave"></a>
-            <a class="punk-logo footer-logo" href="http://punkave.com"></a>
-            <a class="facebook-logo footer-logo" href="http://facebook.com/punkave"></a>
-          </div>
-        </div>
-        <div class="column footer-text right-align">COPYRIGHT &amp; PRIVACY POLICY</div>
-      </div>
-    </div>
-    {% endblock %}
-  </footer>
+    </div></footer> <!-- .site-footer -->
 {% endblock %}
 

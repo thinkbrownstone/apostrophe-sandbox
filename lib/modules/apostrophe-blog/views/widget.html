@@ -1,20 +1,102 @@
+{% set isHome = ( aposContains(item.tags, 'Home') ) %}
+{% set isFeatured = ( aposContains(item.tags, 'Featured') ) %}
+{% set isBlog = ( aposContains(item.tags, 'Blog') ) %}
+{% set isCaseStudy = ( aposContains(item.tags, 'Case Study') ) %}
+
+{% if isFeatured %}
+  <div role="marquee">
+  <ul class="home-featured-slides">
+{% endif %}
+
 {% for snippet in item._snippets %}
-  {% if not snippet.hideTitle %}
 
-  {% set firstImage = aposAreaImage(snippet, 'thumbnail') or aposAreaImage(snippet, 'body') %}
+    {{ aposLog( 'isHome = '+isHome+' || '+'isFeatured = '+isFeatured+' || '+'isBlog = '+isBlog+' || '+'isCaseStudy = '+isCaseStudy+' || ') }}
 
-  {% if firstImage %}
-    <img src="{{ aposFilePath(firstImage, { size: 'max' }) }}" content="{{ aposFilePath(firstImage, { size: 'max' }) }}" />
-  {% endif %}
+    {# get the max size image for the home featured slider #}
+    {% if isFeatured %}
 
-    <h4>
-      {% if snippet.url %}
-        <a href="{{ snippet.url }}">
+    {% set firstImage = aposAreaImage(snippet, 'thumbnail') or aposAreaImage(snippet, 'body') %}
+
+      <li style="background-image: url('{% if firstImage -%}
+        {{ aposFilePath(firstImage, { size: 'max' }) }}
+      {%- else -%}
+        /images/example-fallback-img.jpg
+      {% endif -%}');">
+
+
+      {% if snippet.client %}
+        <div class="banner-case-study-large"><span>Featured Work</span></div>
       {% endif %}
-      {{ snippet.title | e }}
-      {% if snippet.url %}
-        </a>
-      {% endif %}
-    </h4>
-  {% endif %}
+
+      <div class="inner-content">
+        <h2>
+          {{ snippet.title | e }}
+        </h2>
+
+        {% if snippet.client %}
+          <span class="secondary-title">{{ snippet.client }}</span>
+        {% endif %}
+
+        {% if snippet.url %}
+
+          <br />
+          <a class="view-more-link btn work" href="{{ snippet.url }}">
+            {% if snippet.client %}
+              View Case Study
+            {% else %}
+              View Blog Entry
+            {% endif %}
+          </a>
+        {% endif %}
+      </div>
+
+
+      </li>
+
+    {% endif %}
+
+    {# get the max size image for the home featured slider #}
+    {% if isCaseStudy %}
+
+
+      {% set triImage = aposAreaImage(snippet, 'thumbnail') or aposAreaImage(snippet, 'body') %}
+
+      <div class="teaser" style="background-image: url('{% if triImage -%}
+        {{ aposFilePath(triImage, { size: 'max' }) }}
+      {%- else -%}
+        /images/example-fallback-img.jpg
+      {%- endif -%}');">
+
+        <h3 class="teaser-headline">{{ snippet.title }}</h3>
+
+        <div class="teaser-body">
+
+          <p>
+            {% if snippet.client %}
+              <span class="client">{{ snippet.client }}</span>
+            {% endif %}
+          </p>
+
+          {% if snippet.url %}
+            <div class="bottom-anchor">
+              <a class="view-more-link btn" href="{{ snippet.url }}">
+                {% if snippet.client %}
+                  View Case Study
+                {% else %}
+                  View Blog Entry
+                {% endif %}
+              </a>
+            </div>
+          {% endif %}
+
+        </div>
+      </div>
+
+    {% endif %}
+
 {% endfor %}
+
+{% if isFeatured %}
+  </ul>
+  </div>
+{% endif %}

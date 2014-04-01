@@ -11,26 +11,167 @@
 
   {# gets the blog widget which is a large slider #}
   {{ aposSingleton(page, 'featured', 'blog') }}
-
 {% endblock %}
 
 
 {% block mainContent %}
 
-  <div class="intro-quote-section">
-    <div class="container">
-      <blockquote>
-        {{ aposArea(page, 'introquote', { textOnly: true, controls: ['style', 'bold', 'italic'] }) }}
-      </blockquote>
+  <div class="section section-border">
+    <div class="wrapper">
+      <div class="callout">
+        <h2>Research &gt; Design &gt; Delight</h2>
+        <p>
+          {{ aposArea(page, 'introquote', { textOnly: true, controls: ['style', 'bold', 'italic'] }) }}
+        </p>
+      </div>
     </div>
   </div>
 
-  <div class="our-work-home-quote">
-    <div class="container">
-      <blockquote>
-        {{ aposArea(page, 'homeourworkquote', { textOnly: true, controls: ['style', 'bold', 'italic'] }) }}
-      </blockquote>
-      {{ aposSingleton(page, 'homeourworkimgs', 'blog') }}
+  <div class="section work light-bg">
+    <div class="wrapper centered">
+      <div class="callout callout-intro">
+        <h2 class="callout-headline">Our Work</h2>
+        <div class="callout-message">
+          {{ aposArea(page, 'homeourworkquote', { textOnly: true, controls: ['style', 'bold', 'italic'] }) }}
+        </div>
+        <div class="teaser-group sbs">
+          {{ aposSingleton(page, 'homecasestudyimgs', 'blog') }}
+        </div>
+        <a href="/our-work" class="btn btn-outlined">See More</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="section work work-bg bg-img bg-img-services">
+    <div class="wrapper centered">
+      <div class="callout callout-colored callout-intro">
+        <h2 class="callout-headline">Our Services</h2>
+        <p class="callout-message">
+          {{ aposArea(page, 'homeourservicesquote', { textOnly: true, controls: ['style', 'bold', 'italic'] }) }}
+        </p>
+      </div>
+      <ul class="list-services">
+        <li><img src="http://placehold.it/150x150" alt=""><h4>Software Product Design</h4></li>
+        <li><img src="http://placehold.it/150x150" alt=""><h4>Business Application Design</h4></li>
+        <li><img src="http://placehold.it/150x150" alt=""><h4>Responsive Web Design</h4></li>
+        <li><img src="http://placehold.it/150x150" alt=""><h4>Research &amp; Visioning</h4></li>
+        <li><img src="http://placehold.it/150x150" alt=""><h4>Data Visualization</h4></li>
+        <li><img src="http://placehold.it/150x150" alt=""><h4>Technology Development</h4></li>
+      </ul>
+      <a href="/about-us" class="btn btn-outlined">See More</a>
+    </div>
+  </div>
+
+  <div class="section light-bg about">
+    <div class="wrapper centered">
+      <div class="callout callout-intro">
+        <h2 class="callout-headline">Our Clients</h2>
+        <div class="callout-message">{{ aposArea(page, 'homeourclientsquote', { textOnly: true, controls: ['style', 'bold', 'italic'] }) }}</div>
+      </div>
+      <ul class="list-grid grid-clients">
+        <li>
+          <img src="http://placehold.it/125x75" alt="">
+        </li>
+        <li>
+          <img src="http://placehold.it/125x75" alt="">
+        </li>
+        <li>
+          <img src="http://placehold.it/125x75" alt="">
+        </li>
+        <li class="work-t-link grid-callout grid-callout-clients">
+          <img src="http://placehold.it/125x75" alt="">
+          <a class="sans" href="">View Case Study</a>
+        </li>
+        <li>
+          <img src="http://placehold.it/125x75" alt="">
+        </li>
+      </ul>
+      <a class="btn btn-outlined">See More</a>
+    </div>
+  </div>
+
+  <div class="section about about-bg">
+    <div class="wrapper centered">
+      <div class="callout callout-intro callout-colored">
+        <h2 class="callout-headline">About Us</h2>
+        <p class="callout-message">We’re business-minded design professionals who help you create intuitive, engaging and beautiful digital products and business applications.</p>
+      </div>
+
+      <div class="teaser-group sbs teaser-group-headlines">
+        <div class="teaser bg-img bg-teaser-test">
+          <h3 class="headline">Philadelphia</h3>
+        </div>
+        <div class="teaser teaser-featured bg-img bg-teaser-test2">
+          <h3 class="headline">Our Story</h3>
+        </div>
+        <div class="teaser bg-img bg-teaser-test">
+          <h3 class="headline">Conshohocken</h3>
+        </div>
+      </div>
+
+      <a class="btn btn-outlined">See More</a>
+    </div>
+  </div>
+
+  <div class="section about">
+    <div class="wrapper centered">
+      <div class="callout callout-intro">
+        <h2 class="callout-headline">Our Team</h2>
+        <div class="callout-message">{{ aposArea(page, 'hometeamquote', { textOnly: true, controls: ['style', 'bold', 'italic'] }) }}</div>
+      </div>
+      <br />
+      {{ aposSingleton(page, 'hometeamprofileshots', 'groups' ) }}
+      <ul class="list-grid grid-team">
+        <li>
+          <img src="http://placehold.it/230x230" alt="">
+          <div class="grid-team-bio">
+            <p class="grid-team-name">David Kitchenman</p>
+            <p class="grid-team-title">Vice President, Client Engagement</p>
+          </div>
+        </li>
+        <li>
+          <img src="http://placehold.it/230x230" alt="">
+        </li>
+        <li>
+          <img src="http://placehold.it/230x230" alt="">
+        </li>
+        <li class="grid-callout grid-callout-team">
+          <p class=" grid-callout-team-message">
+            <strong class="grid-callout-team-message-main sans">We're Hiring</strong>
+            <a href="">Let's talk.</a>
+          </p>
+        </li>
+        <li>
+          <img src="http://placehold.it/230x230" alt="">
+        </li>
+      </ul>
+      <a class="btn btn-outlined">See More</a>
+    </div>
+  </div>
+
+  <div class="section contact contact-bg">
+    <div class="wrapper wrapper-small centered">
+      <div class="callout callout-intro callout-colored">
+        <h2 class="callout-headline">Contact Us</h2>
+        <p class="callout-message">Read enough? Ready to talk? We’d love to meet you, learn about your business challenges, and help craft a plan to knock them down.</p>
+      </div>
+      <div class="contact-group contact-home">
+        <div class="contact-main contact-subgroup">
+          <h4>Give us a call</h4>
+          <a href="tel:+18002969190" class="phone">800.296.9190</a>
+          <a class="btn btn-outlined">Send us a message</a>
+        </div>
+        <div class="contact-subgroup contact-locations">
+          <div class="contact-location">
+            <h3>Philadelphia</h3>
+            <address>15XX Sansom Street<br>Philadelphia, PA 19428</address>
+          </div>
+          <div class="contact-location last">
+            <h3>Conshohocken</h3>
+            <address>201 Fayette Street<br>Conshohocken, PA 19428</address>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 
