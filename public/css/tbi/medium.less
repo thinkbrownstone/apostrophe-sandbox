@@ -1,9 +1,97 @@
-/* Medium screen CSS 
+/* Medium screen CSS
 ------------------------------------------------------------ */
 
 /* breakpoint TBD */
 
 @media screen and (min-width:70em) {
+
+/* Site Nav
+-------------------------------------------------- */
+.site-header {
+	z-index: 50;
+	position: relative;
+	margin-top: 36px;
+	padding: 0 20px;
+    height: 100px;
+}
+
+.site-header h1{
+    position: absolute;
+    display: block;
+}
+.site-header h1 a {
+    display: block;
+}
+
+.mobile-nav{
+	display: none;
+}
+.site-nav{
+	position: relative;
+	display: block;
+	background-color: transparent;
+	width: 100%;
+	padding: 30px 0;
+	text-align: right;
+	font-size: 17px;
+	font-size: 1.7rem;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+}
+.site-nav > li{
+	display: inline-block;
+	width: auto;
+	border: 0 none;
+}
+.site-nav > li > a{
+	padding: 5px 7px;
+	margin-right: 10px;
+	border: 2px solid;
+	border-color: transparent;
+}
+.site-nav > li > a.active{
+	border: 2px solid #fff;
+	background-color: transparent;
+}
+.site-nav > li > a.nav-work:hover,
+.site-nav > li > a.nav-work:active,
+.site-nav > li > a.nav-work:focus,
+.site-nav > li > a.nav-about:hover,
+.site-nav > li > a.nav-about:active,
+.site-nav > li > a.nav-about:focus,
+.site-nav > li > a.nav-contact:hover,
+.site-nav > li > a.nav-contact:active,
+.site-nav > li > a.nav-contact:focus,
+.site-nav > li > a.nav-blog:hover,
+.site-nav > li > a.nav-blog:active,
+.site-nav > li > a.nav-blog:focus{
+	border: 2px solid #fff;
+	background-color: transparent;
+}
+
+.site-header.sticky{
+    background-color: #191919;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    margin-top: 0;
+}
+.site-header.sticky .site-nav a{
+	border: 2px solid #191919;
+}
+.site-header.sticky .site-nav a.active{
+	border: 2px solid #fff;
+}
+.nav-tbi.sticky-logo{
+	/* For TBI Logo Sticky nav */
+}
+
+
+
+
+
 
 /* Site Footer
 -------------------------------------------------- */
@@ -18,26 +106,26 @@
 	margin-bottom: 8px;
 	width: 324px;
 	height: 128px;
-	}	
+	}
 
 .social-footer {
 	top: -195px;
 	margin: 0 0 10px 0;
 	text-align: right;
-	}		
-	
+	}
+
 .social-footer > li {
 	padding: 0 10px;
 	height: 37px;
 	}
-	
+
 .cta-footer {
 	top: -75px;
 	font-size: 26px;
 	font-size: 2.6rem;
 	text-align: right;
-	}	
-	
+	}
+
 .copyright {
 	top: -140px;
 	font-size: 18px;
