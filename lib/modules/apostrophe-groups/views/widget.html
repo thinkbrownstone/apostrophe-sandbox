@@ -1,10 +1,10 @@
 <ul class="list-grid grid-team">
-{{ aposLog( item ) }}
+{# aposLog( item ) #}
 {# @TODO: use an aposFoo() helper function to pivot on item.limit and prune the people output to match the limit parameter #}
 {% for snippet in item._snippets %}
-  {% for person in snippet._people %}
+  {% set shuffledPeople = arrShuffle( snippet._people ) %}
+  {% for person in shuffledPeople %}
     {% set firstImage = aposAreaImage(person, 'thumbnail') or aposAreaImage(person, 'body') %}
-      {{ aposLog( person ) }}
       <li>
         <a href="/about-us/{{ person.slug }}">
           <img src="{% if firstImage -%}
