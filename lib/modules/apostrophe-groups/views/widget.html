@@ -1,5 +1,6 @@
 <ul class="list-grid grid-team">
 {% for snippet in item._snippets %}
+  {{ aposLog( snippet._people ) }}
   {% set shuffledPeople = arrShuffle( snippet._people, item.limit ) %}
   {% for person in shuffledPeople %}
     {% set firstImage = aposAreaImage(person, 'thumbnail') or aposAreaImage(person, 'body') %}
@@ -11,7 +12,7 @@
           /images/example-fallback-img.jpg
         {% endif -%}">
         <div class="grid-team-bio">
-          <p class="grid-team-name">{{ person.title}}</p>
+          <p class="grid-team-name">{{ person.title }}</p>
           <p class="grid-team-title">{{ person.jobTitle }}</p>
         </div>
       </a>

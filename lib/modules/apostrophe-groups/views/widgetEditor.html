@@ -1,0 +1,37 @@
+{% extends "baseWidgetEditor.html" %}
+{% include "formMacros.html" %}
+
+{% block widgetVars %}
+  {% set widgetClass = 'apos-groups-widget-editor' %}
+{% endblock %}
+
+{% block title %}
+  {{ __('Display Groups') }}
+{% endblock %}
+
+{% block instructions %}
+{{ __('Start typing the name of a group, then click on the suggestions that appear to insert them.
+Or just use tags to pull in groups.') }}
+{% endblock %}
+
+{% block formBody %}
+
+{# TODO rewrite this widget, it should be about people and/or groups and #}
+{# use groups to select people. #}
+
+<fieldset class="apos-fieldset apos-fieldset-radio">
+  <label>{{ __('By Tag') }}</label><input type="radio" name="by" value="tag" />
+</fieldset>
+
+{{ formTags('tags', 'Tags (blank for all people)') }}
+{{ formText('limit', 'People Shown') }}
+
+<hr class="apos-hr" />
+
+<fieldset class="apos-fieldset apos-fieldset-radio">
+  <label>{{ __('By Name') }}</label>
+  <input type="radio" name="by" value="id" />
+</fieldset>
+
+{% endblock %}
+
