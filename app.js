@@ -10,7 +10,9 @@ var site = require('apostrophe-site')({
 
   locals: {
     loginButton: true,
-    arrShuffle: function( array ) {
+    // @param array | array |  an array to be shuffled
+    // @param slice | integer | (optional) limit for number of values to be returned
+    arrShuffle: function( array, slice ) {
       var currentIndex = array.length
         , temporaryValue
         , randomIndex
@@ -27,6 +29,10 @@ var site = require('apostrophe-site')({
         temporaryValue = array[currentIndex];
         array[currentIndex] = array[randomIndex];
         array[randomIndex] = temporaryValue;
+      }
+
+      if ( typeof slice === "number" ) {
+        array = array.slice(0, slice);
       }
 
       return array;

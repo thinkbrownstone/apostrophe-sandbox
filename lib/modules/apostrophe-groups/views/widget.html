@@ -1,8 +1,6 @@
 <ul class="list-grid grid-team">
-{# aposLog( item ) #}
-{# @TODO: use an aposFoo() helper function to pivot on item.limit and prune the people output to match the limit parameter #}
 {% for snippet in item._snippets %}
-  {% set shuffledPeople = arrShuffle( snippet._people ) %}
+  {% set shuffledPeople = arrShuffle( snippet._people, item.limit ) %}
   {% for person in shuffledPeople %}
     {% set firstImage = aposAreaImage(person, 'thumbnail') or aposAreaImage(person, 'body') %}
       <li>
@@ -20,3 +18,4 @@
     </li>
   {% endfor %}
 {% endfor %}
+</ul>
