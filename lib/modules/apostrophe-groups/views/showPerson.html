@@ -1,0 +1,39 @@
+{% extends "layout.html" %}
+
+{% include "directoryMacros.html" %}
+
+{# If you wish you may access the group variable which is the group appearing #}
+{# in the URL at this point. You may also access all groups the user is a member of #}
+{# via person._groups, and the renderPerson macro does that #}
+
+{% block bodyClass %}{{ super() }} page-about{% endblock %}
+
+{# Person specific title tag, for Facebook, SEO, etc. #}
+{%- block title -%}
+  {{ siteTitle }} &ndash; {{ page.title | e }} &ndash; {{ person.title | e }}
+{%- endblock -%}
+
+{# Facebook image, so it doesn't hoover up images from the dropdown menus #}
+{# Works only if you specify an absolute URL for uploadsUrl in data/local.js #}
+
+{% set firstImage = aposAreaImage(person, 'thumbnail') or
+  aposAreaImage(person, 'body') %}
+
+{% block extraHead %}
+  {% if firstImage %}
+    <meta property="og:image" content="{{ aposFilePath(firstImage, { size: 'full' }) }}" />
+  {% endif %}
+{% endblock %}
+
+{% block extraBreadcrumbs %}
+  <li><a href="{{ page.url }}">{{ page.title | e }}</a></li>
+  {# Group will only be present if we're using the groups style for the directory page #}
+  {% if group %}
+    <li>&nbsp;/&nbsp;<a href="{{ group.url }}">{{ group.title | e }}</a></li>
+  {% endif %}
+  <li>&nbsp;/&nbsp;{{ person.title | e }}</li>
+{% endblock %}
+
+{% block mainContent %}
+  {{ renderPerson(person, aposMerge(page.typeSettings, { full: true })) }}
+{% endblock %}

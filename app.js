@@ -92,7 +92,7 @@ var site = require('apostrophe-site')({
       { name: 'home', label: 'Home Page' },
       { name: 'blog', label: 'Content' }, // removed because of special singular "content" type
       { name: 'map', label: 'Map' },
-      { name: 'groups', label: 'Directory' },
+      { name: 'groups', label: 'People' },
       { name: 'about', label: 'About Us' },
     ]
   },
