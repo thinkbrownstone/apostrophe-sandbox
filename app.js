@@ -90,10 +90,10 @@ var site = require('apostrophe-site')({
       { name: 'blocks', label: 'Blocks' },
       { name: 'marquee', label: 'Marquee' },
       { name: 'home', label: 'Home Page' },
-      // { name: 'blog', label: 'Blog' }, // removed because of special singular "content" type
+      { name: 'blog', label: 'Content' }, // removed because of special singular "content" type
       { name: 'map', label: 'Map' },
       { name: 'groups', label: 'Directory' },
-      { name: 'company', label: 'Company' }
+      { name: 'about', label: 'About Us' },
     ]
   },
 

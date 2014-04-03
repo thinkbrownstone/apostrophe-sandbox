@@ -1,0 +1,110 @@
+{% extends "layout.html" %}
+
+{% block bodyClass %}{{ super() }} about{% endblock %}
+
+{# breadcrumbs are excluded from the homepage #}
+{% block breadcrumbs %}
+{% endblock %}
+
+
+{% block hero %}
+
+  {# gets the blog widget which is a large slider #}
+  {{ aposSingleton(page, 'featured', 'blog') }}
+{% endblock %}
+
+
+{% block mainContent %}
+
+  <div class="content-header about-bg">
+    <h1>About us</h1>
+    {{ aposArea(page, 'hometeamquote', { textOnly: true, controls: ['style', 'bold', 'italic'] }) }}
+  </div>
+  <div class="section">
+    <div class="wrapper">
+      <div class="callout callout-intro">
+        <h2 class="callout-headline">Our Story</h2>
+        <div class="callout-message">{{ aposArea(page, 'aboutourstoryquote', { textOnly: true, controls: ['style', 'bold', 'italic'] }) }}</div>
+      </div>
+    </div>
+  </div> <!-- .section -->
+  <div class="section story bg-img bg-img-ourstory">
+    <div class="story-content">
+      <img class="story-img circle" src="http://placehold.it/230x230" alt=""/>
+      <h3 class="story-headline">EST. 2007</h3>
+      <p class="story-body">{{ aposArea(page, 'aboutfoundingblurb', { controls: ['style', 'bold', 'italic', 'createLink' ] }) }}</p>
+    </div>
+  </div> <!-- .section -->
+  <div class="section">
+    <div class="wrapper">
+      <div class="callout callout-intro">
+        <h2 class="callout-headline">Our Team</h2>
+        <div class="callout-message">{{ aposArea(page, 'aboutourstoryquote', { textOnly: true, controls: ['style', 'bold', 'italic'] }) }}</div>
+      </div>
+      <ul class="list-grid grid-team">
+        {{ aposSingleton(page, 'hometeamprofileshots', 'groups' ) }}
+
+        <li class="grid-callout grid-callout-team">
+          <p class="grid-callout-team-message">
+            <strong class="grid-callout-team-message-main sans">We're Hiring</strong>
+            <a href="">Let's talk.</a>
+          </p>
+        </li>
+      </ul>
+    </div>
+  </div> <!-- .section -->
+
+  <div class="section light-bg">
+    <div class="wrapper wrapper-med">
+      <h2>Why choose Think Brownstone</h2>
+      <p><img src="http://placehold.it/940x500" alt=""/></p>
+      <div class="lead">{{ aposArea(page, 'aboutwhychoosetbi', { textOnly: true, controls: ['style', 'bold', 'italic'] }) }}</div>
+      <div class="columns-2">
+        {{ aposArea(page, 'aboutwhychoosetbicontd', { controls: ['style', 'bold', 'italic', 'createLink' ] }) }}
+      </div>
+      <div class="callout callout-border">
+        <img src="http://placehold.it/150x75" alt="" class="callout-logo" />
+        <blockquote>“The PEOPLE who make up Think Brownstone are participatory learners who seek to understand your business objectives long before they seek to solve your design challenge. This approach led Citadel to a creative solution and result that exceeded our expectations. However, much more important to Citadel, together we exceeded the expectations of our customers.”</blockquote>
+        <span class="callout-author"><span class="author-name">MIKE SCHNABLY,</span> <span class="author-title">SENIOR VICE PRESIDENT AT CITADEL</span></span>
+      </div>
+    </div>
+  </div>
+
+  <div class="section about">
+    <div class="wrapper centered">
+      <div class="callout callout-intro">
+        <h2 class="callout-headline">Our Story</h2>
+        <div class="callout-message"></div>
+      </div>
+      <br />
+      <a class="btn btn-outlined">See More</a>
+    </div>
+  </div>
+
+  <div class="section contact contact-bg">
+    <div class="wrapper wrapper-small centered">
+      <div class="callout callout-intro callout-colored">
+        <h2 class="callout-headline">Contact Us</h2>
+        <p class="callout-message">Read enough? Ready to talk? We’d love to meet you, learn about your business challenges, and help craft a plan to knock them down.</p>
+      </div>
+      <div class="contact-group contact-home">
+        <div class="contact-main contact-subgroup">
+          <h4>Give us a call</h4>
+          <a href="tel:+18002969190" class="phone">800.296.9190</a>
+          <a class="btn btn-outlined">Send us a message</a>
+        </div>
+        <div class="contact-subgroup contact-locations">
+          <div class="contact-location">
+            <h3>Philadelphia</h3>
+            <address>15XX Sansom Street<br>Philadelphia, PA 19428</address>
+          </div>
+          <div class="contact-location last">
+            <h3>Conshohocken</h3>
+            <address>201 Fayette Street<br>Conshohocken, PA 19428</address>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+{% endblock %}
