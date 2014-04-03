@@ -15,18 +15,19 @@
 
 <div class="main-navigation">
   <div class="container">
-    <a href="/" class="logo"></a>
     <header><div class="site-header sticky" role="banner">
         <div class="wrapper">
             <a class="tbi-logo-large" href="/">Think Brownstone</a>
+            <a class="tbi-logo-slim" href="/"><span>think</span> brownstone</a>
             <nav>
             {% block mainNav %}
+              <div class="mobile-nav"></div>
               <ul class="site-nav" role="navigation">
                 {% for tab in page.tabs %}
                   {% if tab.slug == page.slug %}
-                    <li class="tab current-page">{{ pageLink(tab) }}</li>
+                    <li class="active nav-{{ tab.slug.substr(1) }}">{{ pageLink(tab) }}</li>
                   {% else %}
-                    <li class="tab">{{ pageLink(tab) }}</li>
+                    <li class="nav-{{ tab.slug.substr(1) }}">{{ pageLink(tab) }}</li>
                   {% endif %}
                 {% endfor %}
               </ul>

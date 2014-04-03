@@ -95,7 +95,7 @@ $(function() {
             var nav = new StickyElement($('.site-header'), {
                 $stickyEl: $('.site-header'),
                 className : 'narrow',
-                startAltStyle : $('.site-header').offset().top + $('.site-header').height(),
+                startAltStyle : 18,
                 addSpecialClass : function() {
                     this.element.addClass(this.className);
                 },
