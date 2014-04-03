@@ -3,7 +3,63 @@
 
 /* breakpoint TBD */
 
-@media screen and (min-width:70em) {
+@media screen and (min-width:48em) {
+
+/* Typography
+-------------------------------------------------- */
+
+h1,.h1 {
+	font-size: 24px;
+	font-size: 2.4rem;
+	}
+
+h2,.h2 {
+	font-size: 24px;
+	font-size: 2.4rem;
+	}
+
+h3,.h3 {
+	font-size: 20px;
+	font-size: 2rem;
+	}
+
+h4,.h4 {
+	font-size: 18px;
+	font-size: 1.8rem;
+	}
+
+/* lead paragraph */
+.lead {
+	font-size: 39px;
+	font-size: 3.9rem;
+	}
+
+/* css3 multi-column: IE10+, fallback is just a single column */
+.columns-2 {
+	-webkit-column-count: 2;
+	-webkit-column-gap:   70px;
+	-moz-column-count:    2;
+	-moz-column-gap:      70px;
+	column-count:         2;
+	column-gap:           70px;
+	}
+
+/* main content copy */
+.content-main {
+	font-size: 26px;
+	font-size: 2.6rem;
+	line-height: 1.5;
+	}
+
+/* Layout
+-------------------------------------------------- */
+
+/* generic content container - full page width - apply full-width background images and colors to this element */
+.section {
+	position: relative;
+	padding: 100px 20px;
+	}
+
 
 /* Site Nav
 -------------------------------------------------- */
@@ -21,6 +77,10 @@
 }
 .site-header h1 a {
     display: block;
+}
+.site-header h1 img {
+	width: 236px;
+	height: 94px;
 }
 
 .mobile-nav{
@@ -54,32 +114,30 @@
 	border: 2px solid #fff;
 	background-color: transparent;
 }
-.site-nav > li > a.nav-work:hover,
-.site-nav > li > a.nav-work:active,
-.site-nav > li > a.nav-work:focus,
-.site-nav > li > a.nav-about:hover,
-.site-nav > li > a.nav-about:active,
-.site-nav > li > a.nav-about:focus,
-.site-nav > li > a.nav-contact:hover,
-.site-nav > li > a.nav-contact:active,
-.site-nav > li > a.nav-contact:focus,
-.site-nav > li > a.nav-blog:hover,
-.site-nav > li > a.nav-blog:active,
-.site-nav > li > a.nav-blog:focus{
+.site-nav > li.nav-work:hover > a,
+.site-nav > li.nav-work:active > a,
+.site-nav > li.nav-work:focus > a,
+.site-nav > li.nav-about:hover > a,
+.site-nav > li.nav-about:active > a,
+.site-nav > li.nav-about:focus > a,
+.site-nav > li.nav-contact:hover > a,
+.site-nav > li.nav-contact:active > a,
+.site-nav > li.nav-contact:focus > a,
+.site-nav > li.nav-blog:hover > a,
+.site-nav > li.nav-blog:active > a,
+.site-nav > li.nav-blog:focus > a{
 	border: 2px solid #fff;
 	background-color: transparent;
 }
 
 .site-header.sticky{
-    background-color: #191919;
-    position: fixed;
     width: 100%;
     top: 0;
     left: 0;
     margin-top: 0;
 }
-.site-header.sticky .site-nav a{
-	border: 2px solid #191919;
+.site-header.sticky.narrow {
+	background-color: #191919;
 }
 .site-header.sticky .site-nav a.active{
 	border: 2px solid #fff;
@@ -88,10 +146,282 @@
 	/* For TBI Logo Sticky nav */
 }
 
+/* Content Header
+-------------------------------------------------- */
+
+.content-header {
+	margin-top: -136px;
+	padding: 180px 20px 190px 20px;
+	height: 550px;
+	}
+
+.content-header h1 {
+	margin-top: 5px;
+	}
+
+.content-header p {
+	font-size: 55px;
+    font-size: 5.5rem;
+    line-height: 1.3;
+	}
+
+/* Forms
+-------------------------------------------------- */
+label {
+    font-size: 24px;
+    font-size: 2.4rem;
+	}
 
 
+/* Callouts
+-------------------------------------------------- */
+
+.callout p{
+	font-size: 45px;
+	font-size: 4.5rem;
+	line-height: 1.25;
+}
+
+.callout-border{
+	padding: 1.25em 1.5em 2em 1.5em;
+}
+
+.callout blockquote{
+	margin-bottom: initial;
+	font-size: 42px;
+	font-size: 4.2rem;
+	font-weight: 300;
+}
+
+.callout-author{
+	font-size: 16px;
+	font-size: 1.6rem;
+}
+
+.callout-author span {
+	display: inline;
+}
+
+/* callout triangle */
+.callout-border:after, .callout-border:before {
+	bottom: -2px;
+	left: 50%;
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+}
+
+.callout-border:after {
+	border-width: 14px;
+	margin-left: -14px;
+}
+
+.callout-border:before {
+	border-width: 17px;
+	margin-left: -17px;
+}
 
 
+/* Teasers
+-------------------------------------------------- */
+
+.teaser {
+	text-align: left;
+	}
+
+.teaser-headline {
+	width: 60%;
+	font-size: 48px;
+	font-size: 4.8rem;
+	line-height: 1.25;
+	text-align: left;
+	}
+
+.teaser .btn {
+	position: absolute;
+	right: 50px;
+	bottom: 50px;
+	padding: .9em 2.25em;
+	}
+
+.teaser .client {
+	position: absolute;
+	left: 48px;
+	bottom: 48px;
+	font-size: 14px;
+	font-size: 1.4rem;
+	}
+
+/* teaser-group */
+.teaser-group .teaser{
+	float: left;
+	width: 50%;
+	}
+
+.teaser-group .teaser-headline {
+	width: 100%;
+	}
+
+.teaser-group .teaser .btn {
+	position: static;
+	}
+
+/* group of teasers in small-big-small format*/
+.teaser-group.sbs .teaser {
+	float: left;
+	width: 31%;
+	margin-top: 25px;
+	}
+
+/* :first-child+ to select the second teaser */
+.teaser-group.sbs .teaser:first-child+.teaser {
+	width: 38%;
+	margin-top: 0;
+	padding: 75px 50px;
+	min-height: 367px;
+	}
+.teaser-group.sbs .teaser-headline {
+	text-align: center;
+	}
+.teaser-group.sbs .teaser-body {
+	text-align: center;
+	}
+.teaser-group.sbs .teaser .btn {
+	position: relative;
+	right: inherit;
+	bottom: inherit;
+	}
+.teaser-group.sbs .teaser .client {
+	position: relative;
+	text-align: center;
+	right: inherit;
+	bottom: inherit;
+	left: inherit;
+	}
+
+/* Call to Action Links
+-------------------------------------------------- */
+/* link | link | link - fills container width */
+.list-cta-links {
+	display: table;
+	margin: 0 auto;
+	padding: 1em 0;
+	width: 100%;
+	border: none;
+	}
+
+.list-cta-links > li {
+	display: table-cell;
+	vertical-align: middle;
+	padding: 0 1em;
+	border: none;
+	}
+
+
+/* Story
+-------------------------------------------------- */
+.story-img {
+	top: -115px;
+	left: 50%;
+	margin-bottom: 40px;
+	margin-left: -115px;
+	height: 230px;
+	width: 230px;
+	}
+
+.story-headline {
+	display: block;
+	}
+
+.story-body {
+	margin-top: 30px;
+	}
+
+/* List Image Grid
+-------------------------------------------------- */
+.list-grid > li{
+	width: 230px;
+	height: 230px;
+	}
+
+/* team grid */
+.list-grid.grid-team > li{
+	margin-bottom: 0;
+	}
+.grid-team-title{
+	display: block;
+	}
+.grid-team-bio{
+	position: absolute;
+	margin: 0 auto;
+	right: 0;
+	left: 0;
+	top: 50px;
+	width: 165px;
+	color: #fff;
+	z-index: 3;
+	}
+.grid-team-name{
+	font-weight: 600;
+	font-size: 30px;
+	font-size: 3rem;
+	line-height: 1;
+	margin-bottom: 15px;
+	}
+.grid-callout-team-message{
+	top: 85px;
+	}
+.grid-callout-team-message-main{
+	font-size: 26px;
+	font-size: 2.6rem;
+	}
+.grid-callout-team a{
+	font-size: 16px;
+	font-size: 1.6rem;
+	}
+
+/* Locations
+-------------------------------------------------- */
+.section-locations {
+	padding-top: 190px;
+	height: 600px;
+	}
+
+.locations {
+	overflow: auto;
+	margin-top: -373px;
+	}
+
+.location {
+	float: left;
+	margin-top: 0;
+	padding: 35px 16px;
+	display: inline-block;
+	margin-left: 2%;
+	width: 49%;
+	}
+
+
+/* Blog
+-------------------------------------------------- */
+.blog-footer-cta .post-list > li{
+	/* prevent splitting margin between columns */
+	-webkit-column-break-inside:avoid;
+    -moz-column-break-inside:avoid;
+    -o-column-break-inside:avoid;
+    -ms-column-break-inside:avoid;
+    column-break-inside:avoid;
+	}
+.blog-footer-cta .post-list > li h4{
+	margin: 0;
+	font-size: 24px;
+	font-size: 2.4rem;
+	}
+.blog-footer-cta .post-list > li a{
+	font-size: 20px;
+	font-size: 2rem;
+	}
 
 /* Site Footer
 -------------------------------------------------- */
@@ -134,4 +464,5 @@
 	}
 
 
-} /* (min-width:76em) */
+
+} /* (min-width:48em) */

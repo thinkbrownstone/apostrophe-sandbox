@@ -34,43 +34,12 @@
     z-index: 801;
 }
 
+.apos-content>div:not(.apos-slideshow):not(.apos-widget), .apos-editable>div:not(.apos-slideshow):not(.apos-widget) {
+    padding: inherit;
+}
+
 .logged-in .site-header.sticky {
     top: 40px;
-}
-.site-header.sticky {
-    background-color: transparent;
-    .tbi-logo-large {
-        display: block;
-        height: 170px;
-        position: absolute;
-        z-index: 1001;
-    }
-}
-
-.site-nav {
-    .transition( all 0.3s ease-in-out);
-    .curent a{
-        border: 2px solid #191919;
-    }
-}
-
-.site-header.sticky.narrow {
-    height: 60px;
-    background-color: #191919;
-    .site-nav {
-        padding: 17px 0;
-    }
-    .tbi-logo-large {
-        display: none;
-    }
-}
-
-.site-header .tbi-logo-large {
-    margin-top: -60px;
-}
-
-.main-navigation + div .apos-ui-container:first-of-type {
-    margin-top: 160px;
 }
 
 .home-featured-slides {
@@ -93,6 +62,7 @@
         color: #fff;
         text-align: center;
         font-weight: 700;
+        text-transform: none;
     }
     .secondary-title {
         font-family: "freight-sans-pro", sans-serif;
@@ -158,12 +128,11 @@ div.banner-no-text-large {
 
 .teaser-group.sbs {
     .teaser {
-        width: 33%;
         background-position: center center;
         height: 450px;
         .teaser-headline {
-            font-size: 30px;
-            font-size: 3rem;
+            font-size: 35px;
+            font-size: 3.5rem;
         }
         .bottom-anchor {
             position: absolute;
@@ -199,7 +168,7 @@ div.banner-no-text-large {
         visibility: hidden;
     }
     &:hover {
-        background: #000;
+        background: #DB0000;
         .grid-team-bio {
             filter: alpha(opacity=100);
             -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
@@ -207,9 +176,9 @@ div.banner-no-text-large {
             visibility: visible;
         }
         > img {
-            filter: alpha(opacity=65);
-            -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=65)";
-            opacity: 0.65;
+            filter: alpha(opacity=50);
+            -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+            opacity: 0.50;
         }
     }
 }
