@@ -1,0 +1,639 @@
+
+.arrow-left-large {
+	width: 231px;
+	height: 231px;
+	background-position: -0px 0;
+}
+
+.arrow-right-large {
+	width: 231px;
+	height: 231px;
+	background-position: -300px 0;
+}
+
+.banner-no-text-large {
+	width: 231px;
+	height: 231px;
+	background-position: -600px 0;
+}
+
+.banner-text-large {
+	width: 231px;
+	height: 231px;
+	background-position: -900px 0;
+}
+
+.business-system-design-large {
+	width: 231px;
+	height: 231px;
+	background-position: -1200px 0;
+}
+
+.chart-large {
+	width: 231px;
+	height: 231px;
+	background-position: -1500px 0;
+}
+
+.data-visualization-large {
+	width: 231px;
+	height: 231px;
+	background-position: -1800px 0;
+}
+
+.down-arrow-large {
+	width: 231px;
+	height: 231px;
+	background-position: -2100px 0;
+}
+
+.dribbble-large {
+	width: 231px;
+	height: 231px;
+	background-position: -2400px 0;
+}
+
+.envelope-large {
+	width: 231px;
+	height: 231px;
+	background-position: -2700px 0;
+}
+
+.facebook-large {
+	width: 231px;
+	height: 231px;
+	background-position: -3000px 0;
+}
+
+.flag-large {
+	width: 231px;
+	height: 231px;
+	background-position: -3300px 0;
+}
+
+.gear-large {
+	width: 231px;
+	height: 231px;
+	background-position: -3600px 0;
+}
+
+.google-large {
+	width: 231px;
+	height: 231px;
+	background-position: -3900px 0;
+}
+
+.instagram-large {
+	width: 231px;
+	height: 231px;
+	background-position: -4200px 0;
+}
+
+.magnifying-glasss-large {
+	width: 231px;
+	height: 231px;
+	background-position: -4500px 0;
+}
+
+.pin-large {
+	width: 231px;
+	height: 231px;
+	background-position: -4800px 0;
+}
+
+.pin2-large {
+	width: 231px;
+	height: 231px;
+	background-position: -5100px 0;
+}
+
+.research-visioning_lightbulb-large {
+	width: 231px;
+	height: 231px;
+	background-position: -5400px 0;
+}
+
+.responsive-web-design-large {
+	width: 231px;
+	height: 231px;
+	background-position: -5700px 0;
+}
+
+.ribbon-large {
+	width: 231px;
+	height: 231px;
+	background-position: -6000px 0;
+}
+
+.software-product-design-large {
+	width: 231px;
+	height: 231px;
+	background-position: -6300px 0;
+}
+
+.star-large {
+	width: 231px;
+	height: 231px;
+	background-position: -6600px 0;
+}
+
+.tbi-logo-large {
+	width: 231px;
+	height: 231px;
+	background-position: -6900px 0;
+}
+
+.technology-development-large {
+	width: 231px;
+	height: 231px;
+	background-position: -7200px 0;
+}
+
+.twitter-large {
+	width: 231px;
+	height: 231px;
+	background-position: -7500px 0;
+}
+
+.arrow-left-large,
+.arrow-right-large,
+.banner-no-text-large,
+.banner-text-large,
+.business-system-design-large,
+.chart-large,
+.data-visualization-large,
+.down-arrow-large,
+.dribbble-large,
+.envelope-large,
+.facebook-large,
+.flag-large,
+.gear-large,
+.google-large,
+.instagram-large,
+.magnifying-glasss-large,
+.pin-large,
+.pin2-large,
+.research-visioning_lightbulb-large,
+.responsive-web-design-large,
+.ribbon-large,
+.software-product-design-large,
+.star-large,
+.tbi-logo-large,
+.technology-development-large,
+.twitter-large {
+	background-image: url(../images/shapes-large-sprite.png);
+	background-size: 7800px 263px;
+}
+
+.arrow-left-medium {
+	width: 93px;
+	height: 93px;
+	background-position: -0px 0;
+}
+
+.arrow-right-medium {
+	width: 93px;
+	height: 93px;
+	background-position: -120px 0;
+}
+
+.banner-no-text-medium {
+	width: 93px;
+	height: 93px;
+	background-position: -240px 0;
+}
+
+.banner-text-medium {
+	width: 93px;
+	height: 93px;
+	background-position: -360px 0;
+}
+
+.business-system-design-medium {
+	width: 93px;
+	height: 93px;
+	background-position: -480px 0;
+}
+
+.chart-medium {
+	width: 93px;
+	height: 93px;
+	background-position: -600px 0;
+}
+
+.data-visualization-medium {
+	width: 93px;
+	height: 93px;
+	background-position: -720px 0;
+}
+
+.down-arrow-medium {
+	width: 93px;
+	height: 93px;
+	background-position: -840px 0;
+}
+
+.dribbble-medium {
+	width: 93px;
+	height: 93px;
+	background-position: -960px 0;
+}
+
+.envelope-medium {
+	width: 93px;
+	height: 93px;
+	background-position: -1080px 0;
+}
+
+.facebook-medium {
+	width: 93px;
+	height: 93px;
+	background-position: -1200px 0;
+}
+
+.flag-medium {
+	width: 93px;
+	height: 93px;
+	background-position: -1320px 0;
+}
+
+.gear-medium {
+	width: 93px;
+	height: 93px;
+	background-position: -1440px 0;
+}
+
+.google-medium {
+	width: 93px;
+	height: 93px;
+	background-position: -1560px 0;
+}
+
+.instagram-medium {
+	width: 93px;
+	height: 93px;
+	background-position: -1680px 0;
+}
+
+.magnifying-glasss-medium {
+	width: 93px;
+	height: 93px;
+	background-position: -1800px 0;
+}
+
+.pin-medium {
+	width: 93px;
+	height: 93px;
+	background-position: -1920px 0;
+}
+
+.pin2-medium {
+	width: 93px;
+	height: 93px;
+	background-position: -2040px 0;
+}
+
+.research-visioning_lightbulb-medium {
+	width: 93px;
+	height: 93px;
+	background-position: -2160px 0;
+}
+
+.responsive-web-design-medium {
+	width: 93px;
+	height: 93px;
+	background-position: -2280px 0;
+}
+
+.ribbon-medium {
+	width: 93px;
+	height: 93px;
+	background-position: -2400px 0;
+}
+
+.software-product-design-medium {
+	width: 93px;
+	height: 93px;
+	background-position: -2520px 0;
+}
+
+.star-medium {
+	width: 93px;
+	height: 93px;
+	background-position: -2640px 0;
+}
+
+.tbi-logo-medium {
+	width: 93px;
+	height: 93px;
+	background-position: -2760px 0;
+}
+
+.technology-development-medium {
+	width: 93px;
+	height: 93px;
+	background-position: -2880px 0;
+}
+
+.twitter-medium {
+	width: 93px;
+	height: 93px;
+	background-position: -3000px 0;
+}
+
+.arrow-left-medium,
+.arrow-right-medium,
+.banner-no-text-medium,
+.banner-text-medium,
+.business-system-design-medium,
+.chart-medium,
+.data-visualization-medium,
+.down-arrow-medium,
+.dribbble-medium,
+.envelope-medium,
+.facebook-medium,
+.flag-medium,
+.gear-medium,
+.google-medium,
+.instagram-medium,
+.magnifying-glasss-medium,
+.pin-medium,
+.pin2-medium,
+.research-visioning_lightbulb-medium,
+.responsive-web-design-medium,
+.ribbon-medium,
+.software-product-design-medium,
+.star-medium,
+.tbi-logo-medium,
+.technology-development-medium,
+.twitter-medium {
+	background-image: url(../images/shapes-medium-sprite.png);
+	background-size: 3120px 105px;
+}
+
+.arrow-left-small {
+	width: 47px;
+	height: 47px;
+	background-position: -0px 0;
+}
+
+.arrow-right-small {
+	width: 47px;
+	height: 47px;
+	background-position: -60px 0;
+}
+
+.banner-no-text-small {
+	width: 47px;
+	height: 47px;
+	background-position: -120px 0;
+}
+
+.banner-text-small {
+	width: 47px;
+	height: 47px;
+	background-position: -180px 0;
+}
+
+.business-system-design-small {
+	width: 47px;
+	height: 47px;
+	background-position: -240px 0;
+}
+
+.chart-small {
+	width: 47px;
+	height: 47px;
+	background-position: -300px 0;
+}
+
+.data-visualization-small {
+	width: 47px;
+	height: 47px;
+	background-position: -360px 0;
+}
+
+.down-arrow-small {
+	width: 47px;
+	height: 47px;
+	background-position: -420px 0;
+}
+
+.dribbble-small {
+	width: 47px;
+	height: 47px;
+	background-position: -480px 0;
+}
+
+.envelope-small {
+	width: 47px;
+	height: 47px;
+	background-position: -540px 0;
+}
+
+.facebook-small {
+	width: 47px;
+	height: 47px;
+	background-position: -600px 0;
+}
+
+.flag-small {
+	width: 47px;
+	height: 47px;
+	background-position: -660px 0;
+}
+
+.gear-small {
+	width: 47px;
+	height: 47px;
+	background-position: -720px 0;
+}
+
+.google-small {
+	width: 47px;
+	height: 47px;
+	background-position: -780px 0;
+}
+
+.instagram-small {
+	width: 47px;
+	height: 47px;
+	background-position: -840px 0;
+}
+
+.magnifying-glasss-small {
+	width: 47px;
+	height: 47px;
+	background-position: -900px 0;
+}
+
+.pin-small {
+	width: 47px;
+	height: 47px;
+	background-position: -960px 0;
+}
+
+.pin2-small {
+	width: 47px;
+	height: 47px;
+	background-position: -1020px 0;
+}
+
+.research-visioning_lightbulb-small {
+	width: 47px;
+	height: 47px;
+	background-position: -1080px 0;
+}
+
+.responsive-web-design-small {
+	width: 47px;
+	height: 47px;
+	background-position: -1140px 0;
+}
+
+.ribbon-small {
+	width: 47px;
+	height: 47px;
+	background-position: -1200px 0;
+}
+
+.software-product-design-small {
+	width: 47px;
+	height: 47px;
+	background-position: -1260px 0;
+}
+
+.star-small {
+	width: 47px;
+	height: 47px;
+	background-position: -1320px 0;
+}
+
+.tbi-logo-small {
+	width: 47px;
+	height: 47px;
+	background-position: -1380px 0;
+}
+
+.technology-development-small {
+	width: 47px;
+	height: 47px;
+	background-position: -1440px 0;
+}
+
+.twitter-small {
+	width: 47px;
+	height: 47px;
+	background-position: -1500px 0;
+}
+
+.arrow-left-small,
+.arrow-right-small,
+.banner-no-text-small,
+.banner-text-small,
+.business-system-design-small,
+.chart-small,
+.data-visualization-small,
+.down-arrow-small,
+.dribbble-small,
+.envelope-small,
+.facebook-small,
+.flag-small,
+.gear-small,
+.google-small,
+.instagram-small,
+.magnifying-glasss-small,
+.pin-small,
+.pin2-small,
+.research-visioning_lightbulb-small,
+.responsive-web-design-small,
+.ribbon-small,
+.software-product-design-small,
+.star-small,
+.tbi-logo-small,
+.technology-development-small,
+.twitter-small {
+	background-image: url(../images/shapes-small-sprite.png);
+	background-size: 1560px 53px;
+}
+
+.svg .arrow-left-large,
+.svg .arrow-right-large,
+.svg .banner-no-text-large,
+.svg .banner-text-large,
+.svg .business-system-design-large,
+.svg .chart-large,
+.svg .data-visualization-large,
+.svg .down-arrow-large,
+.svg .dribbble-large,
+.svg .envelope-large,
+.svg .facebook-large,
+.svg .flag-large,
+.svg .gear-large,
+.svg .google-large,
+.svg .instagram-large,
+.svg .magnifying-glasss-large,
+.svg .pin-large,
+.svg .pin2-large,
+.svg .research-visioning_lightbulb-large,
+.svg .responsive-web-design-large,
+.svg .ribbon-large,
+.svg .software-product-design-large,
+.svg .star-large,
+.svg .tbi-logo-large,
+.svg .technology-development-large,
+.svg .twitter-large,
+.svg .arrow-left-medium,
+.svg .arrow-right-medium,
+.svg .banner-no-text-medium,
+.svg .banner-text-medium,
+.svg .business-system-design-medium,
+.svg .chart-medium,
+.svg .data-visualization-medium,
+.svg .down-arrow-medium,
+.svg .dribbble-medium,
+.svg .envelope-medium,
+.svg .facebook-medium,
+.svg .flag-medium,
+.svg .gear-medium,
+.svg .google-medium,
+.svg .instagram-medium,
+.svg .magnifying-glasss-medium,
+.svg .pin-medium,
+.svg .pin2-medium,
+.svg .research-visioning_lightbulb-medium,
+.svg .responsive-web-design-medium,
+.svg .ribbon-medium,
+.svg .software-product-design-medium,
+.svg .star-medium,
+.svg .tbi-logo-medium,
+.svg .technology-development-medium,
+.svg .twitter-medium,
+.svg .arrow-left-small,
+.svg .arrow-right-small,
+.svg .banner-no-text-small,
+.svg .banner-text-small,
+.svg .business-system-design-small,
+.svg .chart-small,
+.svg .data-visualization-small,
+.svg .down-arrow-small,
+.svg .dribbble-small,
+.svg .envelope-small,
+.svg .facebook-small,
+.svg .flag-small,
+.svg .gear-small,
+.svg .google-small,
+.svg .instagram-small,
+.svg .magnifying-glasss-small,
+.svg .pin-small,
+.svg .pin2-small,
+.svg .research-visioning_lightbulb-small,
+.svg .responsive-web-design-small,
+.svg .ribbon-small,
+.svg .software-product-design-small,
+.svg .star-small,
+.svg .tbi-logo-small,
+.svg .technology-development-small,
+.svg .twitter-small {
+	background-image: url(../images/shapes-sprite.svg);
+}

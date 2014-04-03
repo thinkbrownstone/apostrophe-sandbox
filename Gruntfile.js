@@ -28,7 +28,7 @@ module.exports = function (grunt) {
       'svg-sprites': {
         options: {
           spriteElementPath: 'public/svg/sprites',
-          spritePath: 'public/img',
+          spritePath: 'public/images',
           cssPath: 'public/css'
         },
         shapes: {
