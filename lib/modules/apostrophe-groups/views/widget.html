@@ -1,11 +1,10 @@
 <ul class="list-grid grid-team">
 {% for snippet in item._snippets %}
-  {{ aposLog( snippet._people ) }}
   {% set shuffledPeople = arrShuffle( snippet._people, item.limit ) %}
   {% for person in shuffledPeople %}
     {% set firstImage = aposAreaImage(person, 'thumbnail') or aposAreaImage(person, 'body') %}
       <li>
-        <a href="/about-us/{{ person.slug }}">
+        <a href="/about/{{ person.slug }}">
           <img src="{% if firstImage -%}
           {{ aposFilePath(firstImage) }}
         {%- else -%}
